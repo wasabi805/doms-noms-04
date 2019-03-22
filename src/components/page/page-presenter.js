@@ -20,10 +20,8 @@ class Presenter extends Component{
 
                 <div className={PageStyle.page}>
                     <HeaderContainer/>
-
-
-
                 </div>
+                {/*Adding notes to test testArea Branch*/}
 
             </React.Fragment>
         );
