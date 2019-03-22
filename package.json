@@ -34,6 +34,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "immutable": "^4.0.0-rc.12",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

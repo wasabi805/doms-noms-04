@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PageStyle from "../../assets/style/sass/page.scss";
 
 import HeaderContainer      from '../header/header-container';
+import HeroContainer        from '../hero/hero-container'
 
 
 class Presenter extends Component{
@@ -20,8 +21,8 @@ class Presenter extends Component{
 
                 <div className={PageStyle.page}>
                     <HeaderContainer/>
+                    <HeroContainer/>
                 </div>
-                {/*Adding notes to test testArea Branch*/}
 
             </React.Fragment>
         );
