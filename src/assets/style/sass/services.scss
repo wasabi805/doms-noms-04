@@ -1,0 +1,135 @@
+@import "constants/width";
+
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background-image: url("https://static.wixstatic.com/media/4a55c2_cee5e4ed32bd46e299e465258ce33b4b~mv2_d_2988_2988_s_4_2.jpg/v1/fill/w_980,h_826,al_c,q_85,usm_0.66_1.00_0.01/4a55c2_cee5e4ed32bd46e299e465258ce33b4b~mv2_d_2988_2988_s_4_2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  @include tablet {
+    padding: 8rem 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+    position: relative;
+    font-family: Leafy;
+    max-width: $MAX_WIDTH;
+    color: #fff;
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem 1rem 1rem;
+
+    background-color: rgba(0, 0, 0, .8);
+    border: 1px white solid;
+
+
+    .title {
+      position: relative;
+      font-family: Deadmobil;
+      display: inline;
+      align-self: center;
+    }
+
+    .offer_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-top: 4rem;
+
+      @include tablet {
+        margin: 8rem 0;
+        flex-direction: row;
+      }
+
+      .offer {
+        flex: 1 0;
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 3rem;
+
+        padding: 0;
+        margin-bottom: 4em;
+        //margin-bottom: 4em;
+        text-align: center;
+
+
+
+        &_number {
+          color: #e0aa30;
+          font-size: 3.5em;
+
+          @include desktop{
+            font-size: 5em;
+          }
+
+          i{
+            font-size: 1.5em;
+
+            @media only screen and(min-width: 540px) {
+              font-size: 1.8em;
+            }
+
+          }
+
+        }
+
+        &_title {
+
+          hr {
+            width: 40%;
+          }
+        }
+
+        &_name{
+          font-size: 3rem;
+        }
+
+        &_description {
+          text-align: justify;
+          word-spacing: 1px;
+          line-height: 21px;
+          padding: 0 calc(20vw);
+          margin: 0;
+
+
+          @include tablet {
+            padding: 0;
+            margin: 2rem;
+            font-size: 2.1rem;
+
+          }
+
+          @include desktop{
+            padding: 0;
+            margin: 6rem;
+            font-size: 3.1rem;
+            line-height: 1em;
+          }
+
+
+          p{
+            font-size: 3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .title{
+    font-size: 7rem;
+  }
+
+
+}
+

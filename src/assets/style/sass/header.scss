@@ -1,14 +1,16 @@
+@import "constants/width";
+
 .page_header{
   position: fixed;
   width: 100vw;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  border-bottom: 1px solid #fff;
   z-index: 10;
-  min-height: 64px;
 
   .logo_area{
     position: relative;
     display: inline-block;
-    top: 2em;
+    float: right;
 
     padding: 0.25em 1em;
     width: 10%;
@@ -16,6 +18,12 @@
     img{
       width: 100%;
     }
+
+    @include tablet{
+      float: none;
+    }
+
+
 
   }
 

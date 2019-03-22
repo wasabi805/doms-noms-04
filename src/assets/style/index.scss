@@ -2,16 +2,26 @@
 @import "sass/constants/width";
 
 html{
-  background-color: blue;
+  //background-color: blue;
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
-  height: 100%;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
+
+  //kill whitespace bounce
+  overflow: hidden;
+  height: 100%;
 }
 
 body {
   margin: 0;
   min-width: $MIN_WIDTH;
 
+  font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+
+  //kill whitespace bounce
+  height: 100%;
+  overflow: auto;
 }

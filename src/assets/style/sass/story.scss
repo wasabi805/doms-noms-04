@@ -9,63 +9,78 @@
 
 
 .story {
-  top: 7em;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 50%;
   background-image: url("https://i.ibb.co/8c6L6SF/annie-spratt-370971-unsplash-horizontal.jpg");
 
+
   &_overlay {
+    display: flex;
+
+    align-content: center;
+
+
     background-color: rgba(237, 235, 233, 0.09);
     border: 4px solid #282b2e;
-    padding: 0 6px;
+    padding: 5rem ;
+
+
 
 
     p{
+      position: relative;
       font-family: Leafy;
+      margin: 12px 0;
+
+
+      -webkit-font-smoothing: antialiased;
+
+      @include desktop{
+        font-size: 1.2em;
+        color: #fff;
+        text-align: justify;
+      }
 
     }
+  }
 
-    //@media only screen and(min-width: 768px){
-    //  padding: 4rem 5rem;
-    //
-    //  p{
-    //
-    //    font-size: 3em;
-    //  }
-    //}
+  //TEXT CONTAINER
+  &_overlay span{
+    position: relative;
+    //width: 80%;
+    margin: 0 auto;
+    background-color: rgba(80, 74, 70, 0.36);
+    padding: 36px;
   }
 
   &_title {
+    position: relative;
     font-family: Deadmobil;
+    margin: 0 auto;
     color: #131111;
     font-size: 3rem;
-    margin-bottom: 4rem;
+    text-align: center;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
-    margin-top: 2em;
+
 
 
     @include tablet {
       //background-color: hotpink;
-      font-size: 4.5rem;
-      max-width: 648px;
-      margin: 4rem auto 8rem;
+      font-size: 5rem;
+      margin-bottom: 36px
     }
 
 
     @include desktop {
       //background-color: lime;
-      font-size: 6.4rem;
-      max-width: 938px;
-      margin: 4rem auto 8rem;
+
     }
 
     @include xl_4k{
       //background-color: cyan;
-      font-size: 13.4rem;
-      max-width: 1918px;
-      margin: 4rem auto 8rem;
+
     }
 
 
@@ -73,12 +88,18 @@
 
   &_text {
 
+
     font-size: 2rem;
     text-align: center ;
     max-width: 2150px;
     color: #ece6e6;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    margin: 4rem auto;
+    //margin: 1rem auto;
+
+
+    @include tablet{
+      font-size: 2.7rem;
+    }
 
 
     @include desktop {
@@ -101,3 +122,4 @@
 
   }
 }
+

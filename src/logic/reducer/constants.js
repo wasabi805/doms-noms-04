@@ -18,6 +18,26 @@ export const INITIAL_STATE = Map({
         ]),
     }),
 
+    //Services Component
+    services: List([
+        Map({
+            title: 'Catering',
+            fa_icon: 'utensils',
+            description: `The best way to enjoy your event, is to spend time with those who attended. Don't get stuck preparing a meal and missing all the action. Let our team cater your next event!`,
+        }),
+        Map({
+            title: 'Events',
+            fa_icon: 'glass-cheers', //need pro version
+            description: `Whether a Backyard BBQ , Family Reunion, or Open House, we can bring the event to you! With access to tent, chair, table and linen rentals- we are the ONLY call you need to make before your event starts.`
+        }),
+        Map({
+            title: 'Delivery',
+            fa_icon: 'truck',
+            description: `Don’t want the hassle of sparking up the grill before the party arrives?  We've got you covered. We'll drop off a prepared meal, allowing  you and your guests to enjoy great food and the company of each other.`,
+        }),
+    ]),
+
+
 
 
 

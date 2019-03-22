@@ -6,10 +6,19 @@ import PropTypes from 'prop-types';
 const Presenter = ({title, text}) => {
     return (
         <section className={StoryStyles.story}>
+
             <div className={StoryStyles.story_overlay}>
-                <h1 className={StoryStyles.story_title}>{title}</h1>
-                { text.map((para, i) => <p key={i} className={StoryStyles.story_text}>{para}</p>) }
+
+               <span className={StoryStyles.wu_tang}>
+                    <h1 className={StoryStyles.story_title}>{title}</h1>
+
+
+                   { text.map((para, i) =>
+                       <p key={i} className={StoryStyles.story_text}>{para}</p>) }
+               </span>
             </div>
+
+
         </section>
     );
 };

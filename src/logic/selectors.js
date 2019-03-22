@@ -10,3 +10,6 @@ export const getHeroBackground = ({Logic}) => Logic.getIn(['hero_background']);
 //Story Component
 export const getStoryTitle    = ({Logic}) => Logic.getIn(['story', 'title']);
 export const getStoryTextList = ({Logic}) => Logic.getIn(['story', 'text']).toArray();
+
+//Services Component
+export const getService     = ({Logic}) => Logic.getIn(['services']).toJS();
