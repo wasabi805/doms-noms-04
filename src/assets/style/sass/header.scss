@@ -1,0 +1,22 @@
+.page_header{
+  position: relative;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  z-index: 10;
+  min-height: 64px;
+
+  .logo_area{
+    position: relative;
+    display: inline-block;
+    top: 2em;
+
+    padding: 0.25em 1em;
+    width: 10%;
+
+    img{
+      width: 100%;
+    }
+
+  }
+
+
+}

@@ -1,0 +1,17 @@
+@import "/sass/constants/html";
+@import "sass/constants/width";
+
+html{
+  background-color: blue;
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: $MIN_WIDTH;
+
+}

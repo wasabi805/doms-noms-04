@@ -1,0 +1,1 @@
+export const getNavNames = ({Logic})=> Logic.getIn(['nav_names']);
