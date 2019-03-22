@@ -1,10 +1,10 @@
 import React from 'react';
 import HeroStyle from '../../assets/style/sass/hero.scss'
-import classNames from 'classnames'
+
 import PropTypes from 'prop-types';
 
 
-const Presenter = () => {
+const Presenter = ({video_landing}) => {
 
 
     return (
@@ -12,7 +12,7 @@ const Presenter = () => {
             <div className={HeroStyle.content}>
                 <div className={HeroStyle.iframe_container}>
                     <div id='home' className={HeroStyle.overlay}/>
-                    <iframe title='bbq-video-background' src="https://streamable.com/s/lp7w1/opekoi?autoplay=1&muted=1" frameBorder="0" />
+                    <iframe title='bbq-video-background' src={video_landing} />
                 </div>
 
                 <div className={HeroStyle.overlay_content}>
@@ -26,16 +26,16 @@ const Presenter = () => {
     );
 };
 
-// Presenter.displayName = 'Hero Presenter';
-//
-//
-// Presenter.propTypes = {
-//     images: PropTypes.array.isRequired,
-// };
-//
-// Presenter.defaultProps = {
-//     images: [],
-// };
+Presenter.displayName = 'Hero Presenter';
+
+
+Presenter.propTypes = {
+    video_landing: PropTypes.array.isRequired,
+};
+
+Presenter.defaultProps = {
+    video_landing: '',
+};
 
 
 export default Presenter;

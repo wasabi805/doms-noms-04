@@ -1,7 +1,8 @@
 @import "constants/width";
 
 .hero{
-
+  position: relative;
+  top: 7em;
 }
 
 .content{
@@ -148,6 +149,24 @@
       font-family: 'Standaris' , sans-serif , 'BRUX';
       color: #dad3d3;
       font-size: 8em;
+
+
+      @include tablet{
+        font-size: 17em;
+        font-weight: lighter;
+      }
+
+      @include desktop{
+        h1{
+          font-size: 20em;
+        }
+        transform: translateY(0%);
+      }
+
+      @include xl_4k{
+        font-size: 34em;
+      }
+
     }
 
 
@@ -156,24 +175,6 @@
       color:#999;
       margin-top: 3px;
     }
-
-
-
-    @media only screen and (min-width: $tablet-width ) {
-      h1{
-        font-size: 17em;
-        font-weight: lighter;
-      }
-    }
-
-    @media only screen and (min-width: $desktop-width ) {
-      h1{
-        font-size: 20em;
-      }
-
-      transform: translateY(0%);
-    }
-
 
   }
 

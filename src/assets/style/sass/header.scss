@@ -1,5 +1,6 @@
 .page_header{
-  position: relative;
+  position: fixed;
+  width: 100vw;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   z-index: 10;
   min-height: 64px;
