@@ -1,6 +1,12 @@
 @import "/sass/constants/html";
 @import "sass/constants/width";
 
+
+*{
+  box-sizing: border-box;
+}
+
+
 html{
   //background-color: blue;
   font-family: 'Roboto', sans-serif;

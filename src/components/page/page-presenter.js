@@ -4,7 +4,8 @@ import PageStyle from "../../assets/style/sass/page.scss";
 import HeaderContainer      from '../header/header-container';
 import HeroContainer        from '../hero/hero-container';
 import StoryContainer       from '../story/story-container';
-import ServicesContainer    from '../services/services-container'
+import ServicesContainer    from '../services/services-container';
+import FoodMenuContainer    from '../food-menu/food-menu-container'
 
 
 class Presenter extends Component{
@@ -26,6 +27,7 @@ class Presenter extends Component{
                     <HeroContainer/>
                     <StoryContainer/>
                     <ServicesContainer/>
+                    <FoodMenuContainer/>
                 </div>
 
             </React.Fragment>

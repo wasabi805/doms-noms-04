@@ -1,4 +1,7 @@
 
+//DOMS NOMS Logo
+export const getLogo        = ({Logic}) => Logic.getIn(['info', 'logo']);
+
 
 // Site Navigation names
 export const getNavNames = ({Logic})=> Logic.getIn(['nav_names']);
@@ -13,3 +16,8 @@ export const getStoryTextList = ({Logic}) => Logic.getIn(['story', 'text']).toAr
 
 //Services Component
 export const getService     = ({Logic}) => Logic.getIn(['services']).toJS();
+
+//Food Menu Componet
+export const getFoodMenuTitle    = ({Logic}) => Logic.getIn(['food_menu', 'title']);
+export const getFoodMenuContent    = ({Logic}) => Logic.getIn(['food_menu_content']).toArray();
+export const getFoodMenuFooter    = ({Logic}) => Logic.getIn(['food_menu_footer']);
