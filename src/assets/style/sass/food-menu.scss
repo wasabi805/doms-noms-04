@@ -227,13 +227,22 @@
   font-weight: bolder;
 }
 
+.food_menu_header{
+
+}
+
 .food_name{
-  font-weight: bolder;
+  font-family: "Le Super Serif";
+  font-weight: bold;
   padding: 0;
   margin: 0;
   line-height: 0px;
 }
 
 .food_descrip{
+  font-family: sans-serif;
+  padding: 0 38px;
   font-weight: lighter;
+  //line-height: 32px;
+  margin-bottom: 90px;
 }

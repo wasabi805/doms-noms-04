@@ -14,7 +14,8 @@ const Presenter = ({food_menu_content, food_menu_footer, logo}) => {
 
             <div className={FoodMenuStyles.container_menu}>
 
-                <h1>MENU</h1>
+                <h1 className={''} >MENU</h1>
+                <h5>| Checkout what's cookin' in our kitchen ! |</h5>
 
                 <div className={FoodMenuStyles.row_menu}>
 

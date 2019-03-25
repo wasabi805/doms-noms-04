@@ -42,34 +42,73 @@ export const INITIAL_STATE = Map({
 
         {id: 1, title: 'appetizers',
             courses:[
-                {id: 100, name: 'Nachos', descrip: 'Cash rules everything around me C.R.E.A.M. get the money,dollar dollar bill, yall ', price: '10.00'},
-                {id: 101, name: 'Fries', descrip: 'These are the muchiest nachos.', price: '6.75'}
+                {id: 100, name: 'Lumpia', descrip: 'Traditional , golden crispy deep friend Filipino pork egg roll '},
+                {id: 101, name: 'Bacon wrapped scallops', descrip: 'Our smoked scallops are the juiciest.'},
+                {id: 102, name: "Chicken Wings", descrip: "Your choice of Original classic BBQ, Hot n' Spicy , or Tangy Sweet n' Sour ."},
+                {id: 103, name: 'Thai Chicken Skewers', descrip: 'Served with w/ peanut sauce'},
+                {id: 104, name: 'Yakitori Beef Skewers', descrip: 'Served with w/ Teriyaki sauce.'},
+                {id: 105, name: 'Savory Meatballs Plate', descrip: 'Covered in our silky, signature gravy.'},
+                {id: 106, name: 'Beef Wellington', descrip: 'A juicy cut wrapped in a puffed pastry shell.'},
+                {id: 107, name: 'Mini Crab Cakes', descrip: 'Served with w/ zesty lemon aioli.'},
+                {id: 108, name: 'Bruschetta', descrip: 'Fresh tomatoes with garlic, basil, olive oil, and vinegar served on top of crispy slices of toasted baguettes  .'},
+                {id: 109, name: 'Caprese Skewers', descrip: 'Moist slices of Mozzarella covered with tomatoes,sweet basil , and olive oil served with a balsamic reduction. .'},
+
             ]
         },
 
         {id: 2, title: 'sides',
             courses:[
-                {id: 201, name: 'Cole-Slaw', descrip: 'Those little soft chewy guys', price: '10.00'},
-                {id: 202, name: 'Mac And Cheese', descrip: 'Break me of a piece of that kit-kat bar.', price: '7.00'},
-                {id: 203, name: 'Cornbread', descrip: 'Gimmie yo cornbread!', price: '7.00'},
-                {id: 204, name: 'Beans and Franks', descrip: 'The more you eat the more you toot', price: '7.00'},
-                {id: 205, name: 'Grilled Veggies', descrip: 'The garden variety', price: '7.00'}
+                {id: 201, name: 'Loaded Creamy Mac & Cheese', descrip: 'Made with Wisconsin Sharp Cheddar & Smoked Gouda topped with crunchy a panko crust. '},
+                {id: 202, name: 'Creamy Cole Slaw', descrip: 'Sliced cabbage & carrots in a mayo & sour cream base.'},
+                {id: 203, name: 'Kale Slaw', descrip: 'Cranberries, carrots, almonds, & house vinaigrette.'},
+                {id: 204, name: "Crisetelie's Corn Muffin", descrip: 'A golden moist cornbread topped with sweet honey.'},
+                {id: 205, name: "DOM's NOMS Baked Beans", descrip: 'Made with my special secret blend of sweet and savory spices to complement for any  BBQ. '},
+                {id: 206, name: 'Corn on the Cobb', descrip: 'Grilled sweet & juicy corn.'},
+                {id: 207, name: 'Mashed Potatoes', descrip: 'Choose from either Classic or Garlic mashed.'},
+                {id: 208, name: 'Wild Rice Pilaf', descrip: 'A light seasoned blend of spices on fluffy jasmine rice. '},
+                {id: 209, name: 'Season Grilled Vegetables', descrip: 'The garden variety'},
+                {id: 210, name: "Sautee'd Aricovert", descrip: 'The garden variety'},
+                {id: 211, name: 'Roasted Red Potatoes', descrip: 'Made with hearty seasoning and roasted garlic.'},
+
             ]
         },
 
-        {id: 3,title: 'meat',
+        {id: 3,title: 'Main Course',
             courses:[
-                {id: 301,  name: 'Ribs', descrip: 'Mmmm MM Mm! Get that Itis!', price: '10.00'},
-                {id: 302,  name: 'Brisket', descrip: 'So Fresh We literally just shot the cow!', price: '7.00'},
-                {id: 303, name: 'Chicken', descrip: 'Who doesnt like Chicken?', price: '7.00'},
-                {id: 304, name: 'Burnt Ends', descrip: 'So delicious', price: '7.00'}
+
+                //  Red Meat
+
+                {id: 300,  name: 'Brisket', descrip: 'So Fresh We literally just shot the cow!'},
+                {id: 301,  name: 'Roasted Ribeye', descrip: 'Juicy Ribeye accompanied with Au jus.'},
+                {id: 302,  name: 'Seared Sirloin', descrip: 'Sirloin Cut w/ Mushroom peppercorn Sauce'},
+                {id: 303,  name: 'Steak Fajatas ', descrip: 'Grilled Beef Fajitas w/ sautéed onion & peppers'},
+
+                //  Pork
+                {id: 304, name: "DOM's NOMS Pulled Pork", descrip: 'All Natural bone in pork butt charred & smoked for 10 hrs!'},
+                {id: 305, name: "Applewood Pork Spareribs", descrip: 'St. Louis pork spareribs smoked for 8 hours'},
+                {id: 306, name: 'Smoked Pork Belly', descrip: 'Smothered in my signature soy & bourbon sauce blend.'},
+                {id: 307, name: 'Grilled Pork Belly', descrip: 'Grilled & served w/ soy, ginger, & vinaigrette.'},
+                {id: 308, name: 'Marinated Pork Loin', descrip: 'Served with a w/balsamic, cranberry sauce.'},
+
+                //Chicken
+                {id: 309, name: 'Jerk Chicken', descrip: 'Marinated in Authentic Caribbean spices'},
+                {id: 310, name: 'Herb Roasted Chicken', descrip: 'Marinated w/ a rustic seasoned blend of spices topped with a Marsala sauce. '},
+
+                //Burgers
+                {id: 311, name: 'Angus Beef Burgers', descrip: 'Juicy burgers grilled to perfection'},
+                {id: 312, name: 'Gourmet Veggie Burgers', descrip: 'A flavor-filled vegan delight. '},
+                {id: 313, name: 'Eggplant Parmesan', descrip: 'Traditional roasted veggie .'},
+
+
             ]
         },
 
-        {id:4 , title: 'drinks',
+        {id:4 , title: 'Salads',
             courses:[
-                {id: 401, name: 'Pepsi', descrip: 'Those little soft chewy guys', price: '10.00'},
-                {id: 402, name: 'Sprite', descrip: 'Break me of a piece of that kit-kat bar.', price: '7.00'}
+                {id: 401, name: 'Mix Green Salad', descrip: 'Crisp Romaine lettuce, tomatoes, red onion, and carrots tossed with a italian dressing.'},
+                {id: 402, name: 'Classic Ceaser', descrip: 'Romaine lettuce tossed with aged parmesan, buttery croutons, and zesty Ceaser dressing.'},
+                {id: 402, name: 'Arugala', descrip: 'A leafy blend mixed with apples, walnuts , and cranberries.'},
+                {id: 402, name: 'Frisee', descrip: 'Spring batch leaves with a crispy texture tossed with tomatoes, red onions, and carrots in our house dressing. '},
             ]
         }
     ]),
