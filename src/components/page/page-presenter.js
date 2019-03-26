@@ -5,7 +5,8 @@ import HeaderContainer      from '../header/header-container';
 import HeroContainer        from '../hero/hero-container';
 import StoryContainer       from '../story/story-container';
 import ServicesContainer    from '../services/services-container';
-import FoodMenuContainer    from '../food-menu/food-menu-container'
+import FoodMenuContainer    from '../food-menu/food-menu-container';
+import GalleryContainer     from '../gallery/gallery-container'
 
 
 class Presenter extends Component{
@@ -28,6 +29,7 @@ class Presenter extends Component{
                     <StoryContainer/>
                     <ServicesContainer/>
                     <FoodMenuContainer/>
+                    <GalleryContainer/>
                 </div>
 
             </React.Fragment>

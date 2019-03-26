@@ -107,8 +107,8 @@ export const INITIAL_STATE = Map({
             courses:[
                 {id: 401, name: 'Mix Green Salad', descrip: 'Crisp Romaine lettuce, tomatoes, red onion, and carrots tossed with a italian dressing.'},
                 {id: 402, name: 'Classic Ceaser', descrip: 'Romaine lettuce tossed with aged parmesan, buttery croutons, and zesty Ceaser dressing.'},
-                {id: 402, name: 'Arugala', descrip: 'A leafy blend mixed with apples, walnuts , and cranberries.'},
-                {id: 402, name: 'Frisee', descrip: 'Spring batch leaves with a crispy texture tossed with tomatoes, red onions, and carrots in our house dressing. '},
+                {id: 403, name: 'Arugala', descrip: 'A leafy blend mixed with apples, walnuts , and cranberries.'},
+                {id: 404, name: 'Frisee', descrip: 'Spring batch leaves with a crispy texture tossed with tomatoes, red onions, and carrots in our house dressing. '},
             ]
         }
     ]),
@@ -116,6 +116,21 @@ export const INITIAL_STATE = Map({
     food_menu_footer: {logo: '../../public/bin/img/logo.png' , text: ' * All prices include taxes *' },
 
 
+
+    gallery: Map({
+        title: 'Gallery',
+
+        images: [
+            '../../../src/assets/img/chicken.jpg',
+            '../../../src/assets/img/ribs.jpg',
+            '../../../src/assets/img/rig.jpg',
+            '../../../src/assets/img/spice.jpg',
+            '../../../src/assets/img/chicken.jpg',
+            '../../../src/assets/img/ribs.jpg',
+            '../../../src/assets/img/rig.jpg',
+            '../../../src/assets/img/spice.jpg',
+        ]
+    }),
 
 
 

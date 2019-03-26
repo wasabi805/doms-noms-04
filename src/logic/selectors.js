@@ -17,7 +17,13 @@ export const getStoryTextList = ({Logic}) => Logic.getIn(['story', 'text']).toAr
 //Services Component
 export const getService     = ({Logic}) => Logic.getIn(['services']).toJS();
 
-//Food Menu Componet
+//Food Menu Component
 export const getFoodMenuTitle    = ({Logic}) => Logic.getIn(['food_menu', 'title']);
 export const getFoodMenuContent    = ({Logic}) => Logic.getIn(['food_menu_content']).toArray();
 export const getFoodMenuFooter    = ({Logic}) => Logic.getIn(['food_menu_footer']);
+
+
+//Gallery Component
+export const getGalleryTitle    = ({Logic}) => Logic.getIn(['gallery', 'title']);
+export const getGallerySettings = ({Logic}) => Logic.getIn(['gallery', 'settings']);
+export const getGalleryImgPaths = ({Logic}) => Logic.getIn(['gallery', 'images']);
