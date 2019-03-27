@@ -7,7 +7,7 @@ import StoryContainer       from '../story/story-container';
 import ServicesContainer    from '../services/services-container';
 import FoodMenuContainer    from '../food-menu/food-menu-container';
 import GalleryContainer     from '../gallery/gallery-container'
-
+import AboutUsContainer     from '../about-us/about-us-container';
 
 class Presenter extends Component{
     constructor(props){
@@ -30,6 +30,7 @@ class Presenter extends Component{
                     <ServicesContainer/>
                     <FoodMenuContainer/>
                     <GalleryContainer/>
+                    <AboutUsContainer/>
                 </div>
 
             </React.Fragment>

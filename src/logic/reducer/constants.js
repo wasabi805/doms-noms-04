@@ -2,8 +2,12 @@ import {Map, List} from 'immutable';
 
 export const INITIAL_STATE = Map({
 
+
     //Header Component
     nav_names: ['home ', 'services ' , 'food-menu ' , 'catering ' , 'gallery ' , 'contact '],
+
+
+
 
     //Hero Component
     hero_background : ['https://streamable.com/s/lp7w1/opekoi?autoplay=1&muted=1'],
@@ -17,6 +21,8 @@ export const INITIAL_STATE = Map({
             'Using 100% all natural apple, cherry, mesquite, oak, and pecan smoked woods; we deliver unforgettable savory taste.'
         ]),
     }),
+
+
 
     //Services Component
     services: List([
@@ -115,8 +121,6 @@ export const INITIAL_STATE = Map({
 
     food_menu_footer: {logo: '../../public/bin/img/logo.png' , text: ' * All prices include taxes *' },
 
-
-
     gallery: Map({
         title: 'Gallery',
 
@@ -132,7 +136,17 @@ export const INITIAL_STATE = Map({
         ]
     }),
 
+    about_us: Map({
+        domino: '../../../src/assets/img/domino.jpg',
+        text: 'Stuff About Domino'
+    }),
 
-
+    info: Map({
+        social: List([
+            Map({name: 'facebook',  link:'https://www.facebook.com/domino.corcega/'}),
+            Map({name: 'instagram', link:'https://www.instagram.com/dcorcega00/'}),
+            Map({name: 'yelp',      link:'https://www.yelp.com/'}),
+        ])
+    }),
 
 });

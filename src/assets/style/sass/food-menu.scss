@@ -1,9 +1,11 @@
 @import "constants/width";
 
 .food_menu_container{
+
   display: flex;
   flex-flow: row wrap; //Magic part I
   flex-direction:column;
+
   //border:1px #cf0909 solid;
 
   outline: 1px #cf0909 solid;
@@ -118,11 +120,14 @@
 
 //Magic part II
 .food-menu-container >*{
+
+
   //flex: 1 100%;
 
   //added2
   flex:1 1 auto;
   //border:1px red solid;
+
   text-align:center;
   //margin:5px;  /* and that, will result in a 10px gap */
 }
@@ -220,7 +225,7 @@
 .food_grouping{
   font-family: Standaris;
   font-size: 2em;
-  color: red;
+  color: #f3151d;
   font-weight: bolder;
 }
 
@@ -241,5 +246,12 @@
   padding: 0 38px;
   font-weight: lighter;
   //line-height: 32px;
-  margin-bottom: 90px;
+  margin-bottom: 45px;
+
+
+  @include desktop{
+    margin-bottom: 90px;
+  }
+
+
 }

@@ -2,6 +2,7 @@ $MAX_WIDTH: 130rem;
 $MIN_WIDTH: 32rem;
 $tablet-width: 768px;
 $desktop-width: 1024px;
+$hi_res_desktop: 1281px;
 $xl-width : 2560px;
 
 @mixin tablet {
@@ -14,6 +15,13 @@ $xl-width : 2560px;
     @content;
   }
 }
+
+@mixin desktop_2{
+  @media (min-width: #{$hi_res_desktop}) {
+    @content;
+  }
+}
+
 
 @mixin xl_4k {
   @media (min-width: #{$xl-width}) {

@@ -15,9 +15,6 @@ html{
   margin: 0;
   padding: 0;
 
-  //kill whitespace bounce
-  overflow: hidden;
-  height: 100%;
 }
 
 body {
@@ -26,8 +23,4 @@ body {
 
   font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
-
-  //kill whitespace bounce
-  height: 100%;
-  overflow: auto;
 }

@@ -27,3 +27,7 @@ export const getFoodMenuFooter    = ({Logic}) => Logic.getIn(['food_menu_footer'
 export const getGalleryTitle    = ({Logic}) => Logic.getIn(['gallery', 'title']);
 export const getGallerySettings = ({Logic}) => Logic.getIn(['gallery', 'settings']);
 export const getGalleryImgPaths = ({Logic}) => Logic.getIn(['gallery', 'images']);
+
+//About-us
+export const getAboutUsImage =   ({Logic}) => Logic.getIn(['about_us', 'domino']);
+export const getBrands = ({Logic}) => Logic.getIn(['info' , 'social']).toJS();

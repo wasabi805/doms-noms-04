@@ -1,0 +1,122 @@
+@import "constants/width";
+
+.about_us{
+  background-color: #3e4041;
+  padding: 0 3px;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+
+  .text{
+    margin: 0 2em;
+    font-size: 1em;
+    line-height: 24px;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+    @include desktop_2{
+      line-height: 34px;
+  }
+
+  }
+
+  .about_us_container{
+
+    //flex-direction: column;
+    object-fit: contain;
+
+
+
+    img{
+      display: block;
+      width: 100%;
+
+
+      @include tablet{
+        width: calc(41vw);;
+      }
+    }
+
+    @include tablet{
+      display: flex;
+      flex-direction: row;
+    }
+
+  }
+
+  .profile_img{
+    width:100%;
+    height: 100%;
+    align-self: center;
+
+    @include tablet{
+      width: 50%;
+      align-self: baseline;
+    }
+  }
+
+  .text_container{
+    //flex-grow: 1;
+    color: white;
+    //background-color: #90a7b247;
+    font-family: Alcubierre;
+    text-align: justify;
+
+
+    padding: 2em 0;
+
+
+    @include tablet{
+      //padding: 1em 0;
+      padding: 0;
+    }
+
+    @include desktop{
+      padding-top: 2em;
+    }
+
+
+
+
+
+
+    .title{
+      font-family: Standaris;
+
+      margin: 0 0 12px 50px;
+      //margin-bottom: 12px;
+      //margin-left: 50px;
+      //
+
+
+
+
+      font-size: 2em;
+      color: #b69975;
+      align-self: center;
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+
+
+      h2{
+        font-size: 12px;
+
+      }
+
+      .text{
+        text-align: justify;
+      }
+
+
+
+      //@media only screen and(min-width: 768px) {
+      //  font-size: 4em;
+      //  margin-top: 0;
+      //}
+      //
+      //@media only screen and(min-width: 1440px) {
+      //  padding-top: 5em;
+      //}
+
+    }
+
+  }
+
+}
