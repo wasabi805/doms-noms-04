@@ -48,9 +48,9 @@ export const INITIAL_STATE = Map({
 
         {id: 1, title: 'appetizers',
             courses:[
-                {id: 100, name: 'Lumpia', descrip: 'Traditional , golden crispy deep friend Filipino pork egg roll '},
+                {id: 100, name: 'Lumpia', descrip: 'Traditional , golden crispy deep fried Filipino pork egg roll '},
                 {id: 101, name: 'Bacon wrapped scallops', descrip: 'Our smoked scallops are the juiciest.'},
-                {id: 102, name: "Chicken Wings", descrip: "Your choice of Original classic BBQ, Hot n' Spicy , or Tangy Sweet n' Sour ."},
+                {id: 102, name: "Chicken Wings", descrip: "Your choice of Original   classic BBQ, Hot n' Spicy , or Tangy Sweet n' Sour ."},
                 {id: 103, name: 'Thai Chicken Skewers', descrip: 'Served with w/ peanut sauce'},
                 {id: 104, name: 'Yakitori Beef Skewers', descrip: 'Served with w/ Teriyaki sauce.'},
                 {id: 105, name: 'Savory Meatballs Plate', descrip: 'Covered in our silky, signature gravy.'},
@@ -147,6 +147,33 @@ export const INITIAL_STATE = Map({
             Map({name: 'instagram', link:'https://www.instagram.com/dcorcega00/'}),
             Map({name: 'yelp',      link:'https://www.yelp.com/'}),
         ])
+    }),
+
+
+    contact: Map({
+        form: Map({
+            name: Map({
+                input: '',
+                hasError: false,
+            }),
+            phone: Map({
+                input: '',
+                hasError: false,
+            }),
+            email: Map({
+                input: '',
+                hasError: false,
+            }),
+            subject: Map({
+                input: '',
+                hasError: false,
+            }),
+            message: Map({
+                input: '',
+                hasError: false,
+            }),
+        }),
+        error: '',
     }),
 
 });

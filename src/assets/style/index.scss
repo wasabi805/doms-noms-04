@@ -24,3 +24,14 @@ body {
   font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
 }
+
+
+//used in contact, TODO: make this reusable for the story comp also
+.wood_bg_title {
+  font-family: Deadmobil;
+  transform: translateY(39%);
+  font-size: 4rem;
+  color: #131111;
+  margin-bottom: 4rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+}

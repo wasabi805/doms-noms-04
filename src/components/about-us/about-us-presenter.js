@@ -10,7 +10,7 @@ import SocialContainer from './social-container';
 
 
 const Presenter = ({about_us , brand}) => {
-    console.log(brand, 'brand')
+
     return (
         <section className={AboutUsStyles.about_us}>
             <div className={AboutUsStyles.about_us_container}>

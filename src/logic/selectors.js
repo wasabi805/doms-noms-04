@@ -31,3 +31,10 @@ export const getGalleryImgPaths = ({Logic}) => Logic.getIn(['gallery', 'images']
 //About-us
 export const getAboutUsImage =   ({Logic}) => Logic.getIn(['about_us', 'domino']);
 export const getBrands = ({Logic}) => Logic.getIn(['info' , 'social']).toJS();
+
+//Contact Component
+export const getFieldInput    = ({Logic}, field) => Logic.getIn(['contact', 'form', field, 'input']);
+export const getFieldHasError = ({Logic}, field) => Logic.getIn(['contact', 'form', field, 'hasError']);
+export const getFormError     = ({Logic}) => Logic.getIn(['contact', 'error']);
+// export const getModalType     = ({Logic}) => Logic.getIn(['modal', 'type']);
+export const getPhoneNumber = ({Logic}) => Logic.getIn(['info', 'phone']);

@@ -1,0 +1,240 @@
+@import "constants/width";
+@import "constants/colors";
+
+$center-form-space: 0.2rem;
+$input-font-size: 1.6rem;
+$default-input-border: solid 0.2rem $black;
+$error-input-border: solid 0.2rem $red;
+
+
+//$MAX_WIDTH: 130rem;
+
+
+.contact {
+  padding: 2rem 3rem 4rem;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+  background-image: url("https://i.ibb.co/8c6L6SF/annie-spratt-370971-unsplash-horizontal.jpg");
+
+
+  form{
+
+    //background-color: yellow;
+
+    .contact_button_container{
+      //background-color: aliceblue;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      height: 15em;
+      padding-top: 1em;
+    }
+
+    .stamp{
+      margin: auto;
+      margin-top: 32px;
+      color: #555;
+      font-size: 4rem;
+      font-weight: 700;
+      border: 0.25rem solid #c11717;
+      display: inline-block;
+      padding: 0.25rem 1rem;
+      text-transform: uppercase;
+      border-radius: 1rem;
+      font-family: 'Courier';
+      -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+      -webkit-mask-size: 944px 604px;
+      //mix-blend-mode: multiply;
+      background-color: rgba(245, 239, 239, 0.20);
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+      -webkit-transition: all 100ms ease;
+
+
+      &:hover{
+        background:lighten(rgba(234, 250, 241, 0.91), 20%);
+        transform: scale(1.1);
+        -webkit-transition: all 100ms ease;
+      }
+    }
+
+    .is_approved {
+      color: #c11717;
+      border: 0.5rem solid #c11717;
+      -webkit-mask-position: 13rem 6rem;
+
+      border-radius: 0;
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.8);
+    }
+  }
+
+  @media only screen and (min-width:768px) {
+    form{
+      width: 90vw;
+    }
+
+    .stamp{
+      font-size: 6rem
+
+    }
+  }
+
+  p{
+    font-family: Leafy;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-align: center;
+    max-width: $MAX_WIDTH;
+    color: #ece6e6;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    margin: 4rem auto;
+  }
+  @media only screen and (min-width: 768px) {
+    p{
+      font-size: 3.4rem;
+    }
+  }
+
+
+  //&-overlay {
+  //  padding: 4rem 5rem;
+  //  background-color: rgba(237, 235, 233, 0.09);
+  //  border: 4px solid #282b2e;
+  //}
+
+  @include tablet {
+    width: 100%;
+    display: flex;
+    padding: 4rem 0;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 0.4rem;
+
+    @include tablet {
+      width: 72rem;
+    }
+
+    label {
+      display: none;
+    }
+
+    .form-inputs {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include tablet {
+        flex-direction: row;
+      }
+
+      .left {
+        width: 100%;
+
+        @include tablet {
+          margin-right: $center-form-space;
+          width: inherit;
+        }
+
+        .contact-field {
+          margin-bottom: 0.4rem;
+          display: flex;
+
+          &:last-child {
+            @include tablet {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .field-input {
+          border: $default-input-border;
+          padding: 1rem;
+          font-size: $input-font-size;
+          width: 100%;
+          outline: none;
+
+          &--error {
+            @extend .field-input;
+            border: $error-input-border;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        width: 100%;
+        //margin-top: 1rem;
+
+        @include tablet {
+          //width: 28rem;
+          margin-left: $center-form-space;
+        }
+        .contact-field {
+          display: flex;
+          width: 100%;
+
+          .textarea {
+            border: $default-input-border;
+            font-size: $input-font-size;
+            padding: 1rem;
+            position: relative;
+            flex: 1 0;
+
+            &--error {
+              @extend .textarea;
+              border: $error-input-border;
+            }
+          }
+        }
+      }
+    }
+
+
+    .bottom {
+      align-items: center;
+      display: flex;
+      margin-top: 0.4rem;
+      width: 100%;
+      justify-content: space-between;
+
+      @include tablet {
+        margin-top: 1rem;
+      }
+
+      .error {
+        color: $red;
+        font-size: 1.6rem;
+        text-align: left;
+      }
+      p + button {
+        background-color: $red;
+
+      }
+      button {
+        align-self: flex-end;
+        border: 0;
+        border-radius: 0;
+        color: $white;
+        font-size: 1.4rem;
+        flex: 0 1 3rem;
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+
+  &-text {
+    color: #131111;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  }
+}
