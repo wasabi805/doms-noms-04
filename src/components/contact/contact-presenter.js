@@ -30,7 +30,7 @@ class Presenter extends Component{
             [e.target.name]: e.target.value,
 
         }, ()=>{
-            console.log(this.state.inquire, 'this is whats in state')
+            // console.log(this.state.inquire, 'this is whats in state')
 
         });
     };
@@ -46,7 +46,7 @@ class Presenter extends Component{
             inquire: this.state.inquire,
         };
 
-        // console.log(newInquiry, 'this is what wee sending to the server');
+        // console.log(newInquiry, 'this is what wee sending to the routes');
 
         this.props.sendEmailToDomino(newInquiry)
     };

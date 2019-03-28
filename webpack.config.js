@@ -7,6 +7,16 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports ={
 
+    devServer: {
+        proxy:{
+            '/api' : {
+                target: "http://localhost:5000",
+                changeOrigin: true
+            }
+        },
+
+        port: 3000,
+    },
 
 
     module: {

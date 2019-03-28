@@ -25,12 +25,12 @@ class Presenter extends Component{
             <React.Fragment>
 
                 <div className={PageStyle.page}>
-                    <HeaderContainer/>
-                    <HeroContainer/>
-                    <StoryContainer/>
-                    <ServicesContainer/>
-                    <FoodMenuContainer/>
-                    <GalleryContainer/>
+                    {/*<HeaderContainer/>*/}
+                    {/*<HeroContainer/>*/}
+                    {/*<StoryContainer/>*/}
+                    {/*<ServicesContainer/>*/}
+                    {/*<FoodMenuContainer/>*/}
+                    {/*<GalleryContainer/>*/}
                     <AboutUsContainer/>
                     <ContactContainer/>
                 </div>

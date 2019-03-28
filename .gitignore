@@ -2,3 +2,5 @@
 /dist
 /.idea/
 .idea/workspace.xml
+.env
+
