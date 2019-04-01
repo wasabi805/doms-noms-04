@@ -3,13 +3,12 @@ import ContactStyles from '../../assets/style/sass/contact.scss';
 import IndexStyles from '../../assets/style/index.scss';
 import FormStyles from '../../assets/style/css/bootstrap.css'
 import PropTypes from 'prop-types';
-import {sendEmailToDomino} from "../../logic/actions";
 
 // import FieldContainer    from './inputs/text-field-container';
 // import TextAreaContainer from './inputs/textarea-container';
 
 class Presenter extends Component{
-    constructor(props){
+    constructor(props, {errors}){
         super(props);
 
         this.state={
@@ -17,7 +16,8 @@ class Presenter extends Component{
             contact_email : '',
             contact_phone: '',
             contact_subject: '',
-            inquire: ''
+            inquire: '',
+            errors: this.props.errors
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -85,6 +85,7 @@ class Presenter extends Component{
 
 
     render(){
+        console.log(this.props, 'what are the props')
 
         return(
             <section id='contact' className={ContactStyles.contact}>

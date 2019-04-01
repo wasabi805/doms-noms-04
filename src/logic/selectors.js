@@ -1,3 +1,8 @@
+import validateContactInput from '../../validations/contact'
+
+
+//Contact from Validations
+export const getContactFormErrors = ({Logic})=> Logic.getIn() ;
 
 //DOMS NOMS Logo
 export const getLogo        = ({Logic}) => Logic.getIn(['info', 'logo']);

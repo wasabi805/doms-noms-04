@@ -64,6 +64,8 @@
         color: black;
         font-weight: bolder;
 
+
+
         @media only screen and(min-width: 1440px) {
           font-size: 3em;
         }
@@ -235,14 +237,24 @@
 
 .food_name{
   font-family: "Le Super Serif";
-  font-weight: bold;
+  color: black;
+  font-weight: bolder;
   padding: 0;
   margin: 0;
-  line-height: 0px;
+  font-size: 22px;
+  line-height: 10px;
+
+  @include desktop_2{
+    font-size: 32px;
+    line-height: 28px;
+  }
+
+
 }
 
 .food_descrip{
   font-family: sans-serif;
+  color: #222324;
   padding: 0 38px;
   font-weight: lighter;
   //line-height: 32px;
