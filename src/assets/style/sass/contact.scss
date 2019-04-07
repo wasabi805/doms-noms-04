@@ -17,9 +17,6 @@ $error-input-border: solid 0.2rem $red;
 
 
   form{
-
-    //background-color: yellow;
-
     .contact_button_container{
       //background-color: aliceblue;
       position: relative;
@@ -74,18 +71,13 @@ $error-input-border: solid 0.2rem $red;
 
       .stamp{
         font-size: 6rem
-
       }
     }
 
     @media screen and (min-width: 1921px) {
       width: 64vw;
-
     }
-
   }
-
-
 
   p{
     font-family: Leafy;
@@ -103,15 +95,11 @@ $error-input-border: solid 0.2rem $red;
     }
   }
 
-
-
   @include tablet {
     width: 100%;
     display: flex;
     padding: 4rem 0;
   }
-
-
 
   &-text {
     color: #131111;
@@ -119,13 +107,7 @@ $error-input-border: solid 0.2rem $red;
     font-size: 1.4rem;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
-
-
-
-
-
 }
-
 
 .form_field{
   margin: 26px 0;

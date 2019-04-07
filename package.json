@@ -6,9 +6,10 @@
   "scripts": {
     "server": "nodemon server.js",
     "client": "webpack-dev-server --mode development --open",
-    "start": "npm run client && npm run server",
+    "start": "node server.js",
     "build": "webpack --mode production",
-    "dev": "concurrently --kill-others \"npm run client\" \"npm run server\""
+    "dev": "concurrently --kill-others \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
+    "heroku": "^7.22.9",
     "i": "^0.3.6",
     "immutable": "^4.0.0-rc.12",
     "nodemon": "^1.18.10",

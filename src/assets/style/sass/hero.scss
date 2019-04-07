@@ -135,12 +135,9 @@
     }
   }
 
-
   .overlay_text_container{
     transform: translateY(50%);
     font-size: 6px;;
-
-
 
     //THE TITLE
     h1{
@@ -164,19 +161,14 @@
       @include xl_4k{
         font-size: 34em;
       }
-
     }
-
 
     p {
       font-size: 3em;
       color:#999;
       margin-top: 3px;
     }
-
   }
-
   //  --- END DOM's NOMS Animation ---
-
 
 }
