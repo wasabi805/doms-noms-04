@@ -9,7 +9,6 @@ $moveRight : $tileWidth * ($growFactor - 1);
 
 @import "constants/width";
 
-
 .gallery {
   padding: 0 10px;
   margin: 0;
@@ -92,13 +91,11 @@ $moveRight : $tileWidth * ($growFactor - 1);
     transform-origin: center left;
   }
 
-
   .tile__img{
     width: $tileWidth;
     height: $tileHeight;
     object-fit: cover;
   }
-
 
   .tile__details{
     position: absolute;
@@ -154,8 +151,6 @@ $moveRight : $tileWidth * ($growFactor - 1);
   }
 }
 
-
-//imporved modal
 .modal_background{
   position: fixed;
   height: 100%;
@@ -177,7 +172,6 @@ $moveRight : $tileWidth * ($growFactor - 1);
   }
 }
 
-
 .gallery_modal{
   position: relative;
   display: inline-block;
@@ -191,15 +185,10 @@ $moveRight : $tileWidth * ($growFactor - 1);
   color: #be522d;
   border-radius: 10px;
 
-
   @include desktop{
     max-width: 692px;
   }
-
-
-
 }
-
 
 .container{
   position: relative;
@@ -219,7 +208,6 @@ $moveRight : $tileWidth * ($growFactor - 1);
     vertical-align: middle;
     width: 100%;
   }
-
 }
 
 

@@ -5,9 +5,6 @@
   display: flex;
   flex-flow: row wrap; //Magic part I
   flex-direction:column;
-
-  //border:1px #cf0909 solid;
-
   outline: 1px #cf0909 solid;
   outline-offset: 4px;
 
@@ -26,7 +23,6 @@
       text-transform: uppercase;
     }
   }
-
 
   //ch2 ------------------------
 
@@ -64,8 +60,6 @@
         color: black;
         font-weight: bolder;
 
-
-
         @media only screen and(min-width: 1440px) {
           font-size: 3em;
         }
@@ -74,15 +68,12 @@
       .text{
         font-size: 10.5px;
         color: black;
-        //margin-bottom: 20px;
       }
 
       .price{
         color: black;
       }
     }
-
-
 
   }
 
@@ -122,16 +113,8 @@
 
 //Magic part II
 .food-menu-container >*{
-
-
-  //flex: 1 100%;
-
-  //added2
   flex:1 1 auto;
-  //border:1px red solid;
-
   text-align:center;
-  //margin:5px;  /* and that, will result in a 10px gap */
 }
 
 
@@ -196,19 +179,15 @@
   h1{
     font-size: 2.5em;
   }
-
 }
-
 
 .row_menu{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-
   background-color: #282b2e;
 
 }
-
 
 .col_left_menu, .col_right_menu{
   text-align: center;
@@ -219,8 +198,6 @@
   @include tablet{
     flex: 0 0 50%;
   }
-
-
 }
 
 

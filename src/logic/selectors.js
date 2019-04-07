@@ -1,20 +1,11 @@
-
-// export const getContactFormErrors = (errorReducer)=> {
-//     console.log(errorReducer , 'WHAT IS THE ERROR???????');
-//     return errorReducer
-// };
-
-
 //DOMS NOMS Logo
 export const getLogo        = ({Logic}) => Logic.getIn(['info', 'logo']);
-
 
 // Site Navigation names
 export const getNavNames = ({Logic})=> Logic.getIn(['nav_names']);
 
 //  Hero Background
 export const getHeroBackground = ({Logic}) => Logic.getIn(['hero_background']);
-
 
 //Story Component
 export const getStoryTitle    = ({Logic}) => Logic.getIn(['story', 'title']);
@@ -27,7 +18,6 @@ export const getService     = ({Logic}) => Logic.getIn(['services']).toJS();
 export const getFoodMenuTitle    = ({Logic}) => Logic.getIn(['food_menu', 'title']);
 export const getFoodMenuContent    = ({Logic}) => Logic.getIn(['food_menu_content']).toArray();
 export const getFoodMenuFooter    = ({Logic}) => Logic.getIn(['food_menu_footer']);
-
 
 //Gallery Component
 export const getGalleryTitle    = ({Logic}) => Logic.getIn(['gallery', 'title']);
@@ -42,5 +32,4 @@ export const getBrands = ({Logic}) => Logic.getIn(['info' , 'social']).toJS();
 export const getFieldInput    = ({Logic}, field) => Logic.getIn(['contact', 'form', field, 'input']);
 export const getFieldHasError = ({Logic}, field) => Logic.getIn(['contact', 'form', field, 'hasError']);
 export const getFormError     = ({Logic}) => Logic.getIn(['contact', 'error']);
-// export const getModalType     = ({Logic}) => Logic.getIn(['modal', 'type']);
 export const getPhoneNumber = ({Logic}) => Logic.getIn(['info', 'phone']);

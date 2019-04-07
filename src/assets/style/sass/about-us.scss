@@ -9,8 +9,6 @@
     padding: 2em 0;
   }
 
-
-
   .text{
     margin: 0 1em;
     font-size: 1em;
@@ -80,25 +78,18 @@
   }
 
   .text_container{
-    //flex-grow: 1;
     color: white;
-    //background-color: #90a7b247;
     font-family: Alcubierre;
     text-align: justify;
-
-
     padding: 2em 0;
 
-
     @include tablet{
-      //padding: 1em 0;
       padding: 0;
     }
 
     @include desktop{
       padding-top: 2em;
     }
-
 
     .title{
       font-family: Deadmobil;
@@ -133,18 +124,6 @@
       .text{
         text-align: justify;
       }
-
-
-
-      //@media only screen and(min-width: 768px) {
-      //  font-size: 4em;
-      //  margin-top: 0;
-      //}
-      //
-      //@media only screen and(min-width: 1440px) {
-      //  padding-top: 5em;
-      //}
-
     }
 
   }
