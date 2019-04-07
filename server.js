@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 //INIT
 var app = express();
 
-
 //ROUTES
 const contact_us = require('./routes/api/contact-us/submit');
 

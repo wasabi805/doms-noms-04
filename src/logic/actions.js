@@ -1,36 +1,31 @@
 // import * as Selectors from './selectors'
-import {GET_ERRORS} from "./types";
+
+import {GET_ERRORS, VIEW_ERRORS} from "./types";
+
 import axios from 'axios';
 
-
 export const sendEmailToDomino = newInquiry => dispatch=>{
-
     axios.post('http://localhost:5000/api/contact-us/submit/inquire', newInquiry)
         .then(res=> {
-            console.log('display a modal')
-            dispatch({
-                type: GET_ERRORS,
-                payload: 'none',
-            });
 
-            }
-
-
-        ).catch(err=>{
-            console.log('catch from action triggered', err.response.data.errors );
+            // console.log(res.data, 'res.data')
 
             dispatch({
                 type: GET_ERRORS,
-                payload: err.response.data.errors
+                payload: res.data,
             });
+        }
 
+        ).catch( err => dispatch =>{
+            console.log('catch from actions ran', err.response.data)
+
+            dispatch({
+                type: GET_ERRORS,
+                payload: err.response.data
+                // payload: err
+            });
+        console.log('catch from action triggered', err.response.data.errors);
         })
 };
 
 
-export const setErrors =()=>{
-    return{
-        type: 'SET_CONTACT_FORM_ERRORS',
-        payload: 'can you see errors?'
-    }
-};

@@ -9,12 +9,15 @@ const Presenter = ({title, text}) => {
 
             <div className={StoryStyles.story_overlay}>
 
-               <span className={StoryStyles.wu_tang}>
+               <span>
                     <h1 className={StoryStyles.story_title}>{title}</h1>
 
+                    <p className={StoryStyles.story_text}>
+                        { text.map((para, i) =>
+                            para + " "
+                        )}
+                    </p>
 
-                   { text.map((para, i) =>
-                       <p key={i} className={StoryStyles.story_text}>{para}</p>) }
                </span>
             </div>
 

@@ -7,6 +7,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+
+
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -688,7 +691,7 @@ output {
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
     color: #555555;
     background-color: #f5eeee;
     background-image: none;
@@ -763,7 +766,9 @@ textarea.form_control {
 }
 .form_group {
     margin-bottom: 15px;
+    background: rgba(80, 74, 70, 0.36);
 }
+
 
 @media only screen and (min-width: 768px) {
     .form_group > div {
@@ -779,6 +784,22 @@ textarea.form_control {
     flex-grow: 1;
 }
 
+.form_group .column_right textarea{
+   height: 92%;
+}
+
+
+.form_group .column_left > input {
+   /*background: lime;*/
+    margin: 32px 0;
+}
+
+.form_group .column_left input:nth-child(1) {
+    margin: 0;
+}
+
+
+
 @media (min-width: 768px) {
     .form_group{
         display: flex;
@@ -788,6 +809,8 @@ textarea.form_control {
         width: 50%
     }
 }
+
+
 
 
 

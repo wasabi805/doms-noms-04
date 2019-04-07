@@ -21,8 +21,9 @@ router.post('/inquire' , cors(),  (req,res)=>{
 
     //CHECK VALIDATION :  if isValid === false, that means there were errors on the form, return the errors so they can be displayed to the user.
     if(!isValid){
-        // console.log(errors, 'YOU GOT ERRROS');
-        res.status(500).send({errors: errors})
+        console.log(errors, 'YOU GOT errorReducer');
+
+        res.send(errors)
     }
 
 
@@ -87,8 +88,8 @@ router.post('/inquire' , cors(),  (req,res)=>{
 
     sgMail.send(msgToDomino).then((success,)=>{
         if(success){
-            console.log('we can send the msg');
-            res.send(success)
+
+            res.status(200).send('display_modal')
         }
 
     }).catch(err=>{

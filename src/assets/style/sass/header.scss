@@ -11,8 +11,6 @@
     position: relative;
     display: inline-block;
     float: right;
-
-    padding: 0.25em 1em;
     width: 15%;
 
     img{
@@ -20,6 +18,7 @@
     }
 
     @include tablet{
+      padding: 0.25em 1em;
       float: none;
     }
   }

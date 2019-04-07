@@ -24,7 +24,9 @@
 
     background-color: rgba(237, 235, 233, 0.09);
     border: 4px solid #282b2e;
-    padding: 5rem ;
+    @include tablet{
+      padding: 5rem ;
+    }
 
 
 
@@ -49,10 +51,20 @@
   //TEXT CONTAINER
   &_overlay span{
     position: relative;
-    //width: 80%;
-    margin: 0 auto;
+
+    margin: 1em auto;
+    //padding: 1em;
     background-color: rgba(80, 74, 70, 0.36);
-    padding: 36px;
+    width: 90%;
+
+    p{
+      margin: 0 auto;
+    }
+
+    @include tablet{
+      padding: 36px 5rem;
+    }
+
   }
 
   &_title {
@@ -64,25 +76,15 @@
     text-align: center;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
 
-
-
-    @include tablet {
-      //background-color: hotpink;
+    @include tablet{
       font-size: 5rem;
       margin-bottom: 36px
     }
 
 
-    @include desktop {
-      //background-color: lime;
-
+    @include desktop_2{
+      font-size: 7rem;
     }
-
-    @include xl_4k{
-      //background-color: cyan;
-
-    }
-
 
   }
 
@@ -106,7 +108,6 @@
       //background-color: lime;
 
       font-size: 3rem;
-      max-width: 1148px;
       margin: 4rem auto 8rem;
     }
 

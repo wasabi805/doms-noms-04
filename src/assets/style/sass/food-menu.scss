@@ -242,7 +242,13 @@
   padding: 0;
   margin: 0;
   font-size: 22px;
-  line-height: 10px;
+  line-height: 24px;
+
+  @include i_phones{
+    line-height: 10px;
+  }
+
+
 
   @include desktop_2{
     font-size: 32px;

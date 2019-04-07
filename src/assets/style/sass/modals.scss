@@ -1,0 +1,165 @@
+@import "constants/width";
+
+
+
+//CONTACT FORM MODAL
+.form_modal_background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+
+  &:before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #0E0F11;
+    opacity: 0.7;
+    z-index: 100;
+
+
+  }
+
+}
+
+.form_modal{
+  position: relative;
+  /* margin: 50%; */
+  top: 25%;
+  display: inline-block;
+  /* left: 12%; */
+  z-index: 101;
+  max-width: 850px;
+  background-color: white;
+  width: 75%;
+  color: #0E0F11;
+  border-radius: 10px;
+}
+
+.container{
+  position: relative;
+
+  .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lime;
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+
+
+    transform: translate(0% , -50%);
+    border-radius: 50% 50%;
+    font-size: 80px;
+    color: white;
+    box-shadow: 0 8px 6px -6px black;
+
+    @include tablet{
+      width: 150px;
+      height: 150px;
+    }
+
+    @include desktop{
+      font-size: 100px;
+    }
+
+    @include desktop_2{
+      width: 250px;
+      height: 250px;
+    }
+
+  }
+
+  .message{
+
+    font-family: Alcubierre;
+    color: #3b3733;
+    text-align: center;
+    /* margin: 58px 0; */
+    bottom: 52px;
+    position: relative;
+
+    @include desktop_2{
+      bottom: 102px;
+    }
+
+
+    h1{
+
+      font-size: 52px;
+      margin: 0;
+
+      @include desktop_2{
+        font-size: 104px;
+      }
+    }
+
+    p{
+      font-size: 26px;
+      margin: 0;
+
+      @include desktop_2{
+        font-size: 50px;
+      }
+    }
+  }
+
+  .close{
+    background-color: #5cb85c;
+    width: 50%;
+    height: 62px;
+    border-radius: 7px;
+    color: white;
+    box-shadow: 0 8px 6px -6px black;
+    margin: 0 25%;
+    margin-bottom: 32px;
+
+    p{
+      margin: 0;
+    }
+  }
+}
+
+
+//IMG MODAL
+.modal_gallery{
+  //display: none; /* Hidden by default */
+  display: block;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal_gallery_content{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal_gallery_content {
+    width: 100%;
+  }
+}
+

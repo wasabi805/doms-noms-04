@@ -1,11 +1,9 @@
 @import "/sass/constants/html";
 @import "sass/constants/width";
 
-
 *{
   box-sizing: border-box;
 }
-
 
 html{
   //background-color: blue;
@@ -14,24 +12,35 @@ html{
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
-
 }
 
 body {
   margin: 0;
   min-width: $MIN_WIDTH;
-
   font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
 }
 
-
 //used in contact-us, TODO: make this reusable for the story comp also
 .wood_bg_title {
   font-family: Deadmobil;
-  transform: translateY(39%);
   font-size: 4rem;
+  text-align: center;
+  transform: translateY(39%);
   color: #131111;
   margin-bottom: 4rem;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+
+  @include i_phones{
+    font-size: 6rem;
+  }
+
+
+  @include tablet{
+    font-size: 4em;
+  }
+
+  @include desktop_2{
+    font-size: 10rem;
+  }
 }

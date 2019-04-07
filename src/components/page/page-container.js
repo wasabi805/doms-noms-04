@@ -7,10 +7,8 @@ import Presenter      from './page-presenter';
 
 const mapStateToProps = state => ({
     // openNavModal: Actions
-
-
-
 });
+
 
 const Container = connect(mapStateToProps)(Presenter);
 

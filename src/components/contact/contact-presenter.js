@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import ContactStyles from '../../assets/style/sass/contact.scss';
 import IndexStyles from '../../assets/style/index.scss';
-import FormStyles from '../../assets/style/css/bootstrap.css'
+import FormStyles from '../../assets/style/css/bootstrap.css';
+import classNames from 'classnames'
 import PropTypes from 'prop-types';
 
-// import FieldContainer    from './inputs/text-field-container';
-// import TextAreaContainer from './inputs/textarea-container';
-
 class Presenter extends Component{
-    constructor(props, {errors}){
+    constructor(props){
+
         super(props);
 
         this.state={
@@ -17,12 +16,42 @@ class Presenter extends Component{
             contact_phone: '',
             contact_subject: '',
             inquire: '',
-            errors: this.props.errors
+
+            formErrors: "",
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
+    //UPDATE this.state with errors from this.props
+    componentWillReceiveProps(nextProps, nextContext) {
+        if(nextProps.errors){
+            this.setState({
+                formErrors : nextProps.errors
+            })
+
+        }
+    }
+
+    //when all the form validation errors are cleared display the success modal (Your Email was sent)
+    componentDidUpdate(prevProps, prevState, snapshot) {
+
+        if(this.state.formErrors === 'display_modal'){ //Reminder: display_modal is coming from the server.
+            this.setState({
+                contact_name : '',
+                contact_email : '',
+                contact_phone: '',
+                contact_subject: '',
+                inquire: '',
+
+                formErrors: "",
+                opacity: 1,
+            });
+            //for debugging:
+            // console.log("how many times do you see this msg?")
+            this.props.openFormModal('contact_modal');
+        }
     }
 
     handleChange(e){
@@ -30,12 +59,13 @@ class Presenter extends Component{
             [e.target.name]: e.target.value,
 
         }, ()=>{
+            //for testing:
             // console.log(this.state.inquire, 'this is whats in state')
-
         });
     };
 
-    handleSubmit(e){
+
+    handleSubmit(e ){
         e.preventDefault();
 
         const newInquiry = {
@@ -45,125 +75,132 @@ class Presenter extends Component{
             contact_subject: this.state.contact_subject,
             inquire: this.state.inquire,
         };
+        //for debugging:
+        // console.log(newInquiry, 'this is getting sent to the server');
+        this.props.sendEmailToDomino(newInquiry);
 
-        // console.log(newInquiry, 'this is what wee sending to the routes');
-
-        this.props.sendEmailToDomino(newInquiry)
     };
 
-
-    //==========    had to bind instead of using es6, was getting an error in the console.  ==========
-
-    // handleChange=(e)=>{
-    //
-    //     this.setState({
-    //         [e.target.name]: e.target.value,
-    //
-    //     }, ()=>{
-    //         console.log(this.state.contact_name, 'this is whats in state')
-    //     });
-    //
-    //
-    // };
-
-    // handleSubmit=(e)=>{
-    //     e.preventDefault();
-    //
-    //     const newInquiry = {
-    //         contact_name : this.state.contact_name,
-    //         contact_email: this.state.contact_email,
-    //         contact_phone: this.state.contact_phone,
-    //         contact_subject: this.state.contact_subject,
-    //     };
-    //
-    //     console.log(this.props.sendEmailToDomino);
-    //
-    //     this.props.sendEmailToDomino(newInquiry)
-    // };
-
-
-
-
     render(){
-        console.log(this.props, 'what are the props')
+
+        let {contact_name, contact_email, contact_phone, contact_subject, inquire} = this.state.formErrors;
 
         return(
             <section id='contact' className={ContactStyles.contact}>
-                <div className='contact-overlay'>
-
-                </div>
 
                 <h1 className={IndexStyles.wood_bg_title}>Get in Touch</h1>
+                <p className='story-text'>Feel free to get in touch about having us catering your next event!</p>
 
 
                 <form onSubmit={this.handleSubmit} >
+
                     <div className={FormStyles.form_group}>
                         <div className={FormStyles.column_left}>
-                            <input
-                                id="contact-name"
-                                className={FormStyles.form_control}
-                                type="text"
-                                name='contact_name'
 
-                                value={this.state.contact_name}
-                                onChange={this.handleChange}
+                           <div className={ContactStyles.form_field}>
+                               <input
+                                   id="contact-name"
+                                   className={FormStyles.form_control}
+                                   type="text"
+                                   name='contact_name'
 
-                                placeholder="NAME:"/>
+                                   value={this.state.contact_name}
+                                   onChange={this.handleChange}
 
-                            <input
-                                id="contact-email"
-                                className={FormStyles.form_control}
-                                type="text"
-                                name='contact_email'
+                                   placeholder="NAME:"/>
 
-                                value={this.state.contact_email}
-                                onChange={this.handleChange}
 
-                                placeholder="EMAIL:"/>
+                               <small className={classNames(`${ContactStyles.form_error_field}` , 'show-form-error')}>
 
-                            <input
-                                id="contact-phone"
-                                className={FormStyles.form_control}
-                                type="text"
-                                name='contact_phone'
+                                   {contact_name}
 
-                                value={this.state.contact_phone}
-                                onChange={this.handleChange}
+                               </small>
+                           </div>
 
-                                placeholder="PHONE:"/>
 
-                            <input
-                                id="contact-subject"
-                                className={FormStyles.form_control}
-                                type="text"
-                                name='contact_subject'
+                            <div className={ContactStyles.form_field}>
+                               <input
+                                   id="contact-email"
+                                   className={FormStyles.form_control}
+                                   type="text"
+                                   name='contact_email'
 
-                                value={this.state.contact_subject}
-                                onChange={this.handleChange}
+                                   value={this.state.contact_email}
+                                   onChange={this.handleChange}
 
-                                placeholder="SUBJECT:"/>
+                                   placeholder="EMAIL:"/>
+
+                                <small className={classNames(`${ContactStyles.form_error_field}` , 'show-form-error')}>
+                                   {contact_email}
+                               </small>
+                           </div>
+
+                            <div className={ContactStyles.form_field}>
+                               <input
+                                   id="contact-phone"
+                                   className={FormStyles.form_control}
+                                   type="text"
+                                   name='contact_phone'
+
+                                   value={this.state.contact_phone}
+                                   onChange={this.handleChange}
+
+                                   placeholder="PHONE:"/>
+
+                               <small className={ContactStyles.form_error_field}>
+                                   {contact_phone}
+                               </small>
+                           </div>
+
+                            <div className={ContactStyles.form_field}>
+                                <input
+                                    id="contact-subject"
+                                    className={FormStyles.form_control}
+                                    type="text"
+                                    name='contact_subject'
+
+                                    value={this.state.contact_subject}
+                                    onChange={this.handleChange}
+
+                                    placeholder="SUBJECT:"/>
+
+                                <small className={ContactStyles.form_error_field}>
+                                    {contact_subject}
+                                </small>
+
+                            </div>
                         </div>
+
 
                         <div className={FormStyles.column_right}>
 
-                            <textarea
-                                className={FormStyles.form_control}
-                                rows="3" placeholder="How can we help you today??"
-                                name='inquire'
-                                value={this.state.inquire}
-                                onChange={this.handleChange}
-                            />
+                            <div className={ContactStyles.form_field}>
+                                <textarea
+                                    className={FormStyles.form_control}
+                                    rows="16" placeholder="How can we help you today??"
+                                    name='inquire'
+                                    value={this.state.inquire}
+                                    onChange={this.handleChange}
+                                />
+
+                               <small className={ContactStyles.form_error_text_box}>
+                                {inquire}
+                               </small>
+                           </div>
 
                         </div>
+
+
                     </div>
 
                     <div className={ContactStyles.contact_button_container}>
-                        <button type="submit" className={`${ContactStyles.stamp} ${ContactStyles.is_approved}`}>Submit</button>
+                        <button type="submit"  className={`${ContactStyles.stamp} ${ContactStyles.is_approved}`}>Submit</button>
+
                     </div>
 
 
                 </form>
-                <p className='story-text'>Feel free to contact us about having us cater your next event!</p>
+
             </section>
         )
     }

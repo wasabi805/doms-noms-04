@@ -8,17 +8,10 @@
     display: flex;
     justify-content: space-evenly;
     padding: 0;
-    margin: 1em;
 
 
     li{
-      //flex: 1 0 33%;
-      //border: 1px solid crimson;
       list-style: none;
-      text-align: center;
-      font-size: 2em;
-
-
     }
   }
 }
@@ -30,9 +23,9 @@
 
 .fa_stack{
   margin: 0px;
-  height: 60%;
+
   border-radius: 9px;
-  width: 98%;
+
   background-color: white;
   line-height: 55px;
 
@@ -43,7 +36,14 @@
   width: 99px;
   height: 99px;
   font-size: 116px;
-  //background-color: white;
+  background-color: white;
+
+  //testing
+  //font-size: 5em;
+
+
+
+
   &:before{
     content: "\f09a";
     position: relative;

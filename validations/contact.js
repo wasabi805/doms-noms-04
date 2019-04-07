@@ -62,7 +62,7 @@ module.exports = function validateContactInput (data) {
     //      05 - Inquire Text Field
     //if the contact_email entered is not a valid email
     if(Validator.isEmpty(data.inquire)){
-        errors.inquire = 'Please include a message or feel free to ask us any questions you have..'
+        errors.inquire = 'Please include a message.'
     }
 
 

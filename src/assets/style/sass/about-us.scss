@@ -5,11 +5,22 @@
   padding: 0 3px;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
+  @include desktop{
+    padding: 2em 0;
+  }
+
+
+
   .text{
-    margin: 0 2em;
+    margin: 0 1em;
     font-size: 1em;
     line-height: 24px;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+
+    @include tablet{
+      margin: 0 2em;
+    }
 
     @include desktop_2{
       line-height: 34px;
@@ -18,11 +29,7 @@
   }
 
   .about_us_container{
-
-    //flex-direction: column;
     object-fit: contain;
-
-
 
     img{
       display: block;
@@ -73,26 +80,29 @@
     }
 
 
-
-
-
-
     .title{
-      font-family: Standaris;
-
-      margin: 0 0 12px 50px;
-      //margin-bottom: 12px;
-      //margin-left: 50px;
-      //
-
-
-
-
-      font-size: 2em;
-      color: #b69975;
+      font-family: Deadmobil;
+      text-align: center;
+      font-size: 1.6em;
+      color: #c6b6a2;
       align-self: center;
       text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 
+      @include i_phones{
+        font-size: 2em;
+      }
+
+      @include i_phone_plus{
+        font-size: 2.3em;
+      }
+
+      @include tablet{
+        font-size: 2em;
+      }
+
+      @include desktop{
+        font-size: 2.4em;
+      }
 
 
       h2{

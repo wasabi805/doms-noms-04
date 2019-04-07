@@ -6,10 +6,6 @@ $input-font-size: 1.6rem;
 $default-input-border: solid 0.2rem $black;
 $error-input-border: solid 0.2rem $red;
 
-
-//$MAX_WIDTH: 130rem;
-
-
 .contact {
   padding: 2rem 3rem 4rem;
   flex-direction: column;
@@ -72,18 +68,24 @@ $error-input-border: solid 0.2rem $red;
       border-radius: 0;
       text-shadow: 2px 4px 3px rgba(0,0,0,0.8);
     }
-  }
 
-  @media only screen and (min-width:768px) {
-    form{
+    @media only screen and (min-width:768px) {
       width: 90vw;
+
+      .stamp{
+        font-size: 6rem
+
+      }
     }
 
-    .stamp{
-      font-size: 6rem
+    @media screen and (min-width: 1921px) {
+      width: 64vw;
 
     }
+
   }
+
+
 
   p{
     font-family: Leafy;
@@ -102,11 +104,6 @@ $error-input-border: solid 0.2rem $red;
   }
 
 
-  //&-overlay {
-  //  padding: 4rem 5rem;
-  //  background-color: rgba(237, 235, 233, 0.09);
-  //  border: 4px solid #282b2e;
-  //}
 
   @include tablet {
     width: 100%;
@@ -114,122 +111,7 @@ $error-input-border: solid 0.2rem $red;
     padding: 4rem 0;
   }
 
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0 0.4rem;
 
-    @include tablet {
-      width: 72rem;
-    }
-
-    label {
-      display: none;
-    }
-
-    .form-inputs {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      @include tablet {
-        flex-direction: row;
-      }
-
-      .left {
-        width: 100%;
-
-        @include tablet {
-          margin-right: $center-form-space;
-          width: inherit;
-        }
-
-        .contact-field {
-          margin-bottom: 0.4rem;
-          display: flex;
-
-          &:last-child {
-            @include tablet {
-              margin-bottom: 0;
-            }
-          }
-        }
-
-        .field-input {
-          border: $default-input-border;
-          padding: 1rem;
-          font-size: $input-font-size;
-          width: 100%;
-          outline: none;
-
-          &--error {
-            @extend .field-input;
-            border: $error-input-border;
-          }
-        }
-      }
-
-      .right {
-        display: flex;
-        width: 100%;
-        //margin-top: 1rem;
-
-        @include tablet {
-          //width: 28rem;
-          margin-left: $center-form-space;
-        }
-        .contact-field {
-          display: flex;
-          width: 100%;
-
-          .textarea {
-            border: $default-input-border;
-            font-size: $input-font-size;
-            padding: 1rem;
-            position: relative;
-            flex: 1 0;
-
-            &--error {
-              @extend .textarea;
-              border: $error-input-border;
-            }
-          }
-        }
-      }
-    }
-
-
-    .bottom {
-      align-items: center;
-      display: flex;
-      margin-top: 0.4rem;
-      width: 100%;
-      justify-content: space-between;
-
-      @include tablet {
-        margin-top: 1rem;
-      }
-
-      .error {
-        color: $red;
-        font-size: 1.6rem;
-        text-align: left;
-      }
-      p + button {
-        background-color: $red;
-
-      }
-      button {
-        align-self: flex-end;
-        border: 0;
-        border-radius: 0;
-        color: $white;
-        font-size: 1.4rem;
-        flex: 0 1 3rem;
-        padding: 0.5rem 2rem;
-      }
-    }
-  }
 
   &-text {
     color: #131111;
@@ -237,4 +119,31 @@ $error-input-border: solid 0.2rem $red;
     font-size: 1.4rem;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
+
+
+
+
+
 }
+
+
+.form_field{
+  margin: 26px 0;
+}
+
+.form_error_text_box{
+  position: absolute;
+  margin: 0;
+  color: #f5ab47;
+  font-size: 14px;
+}
+
+
+
+.form_error_field{
+  position: absolute;
+  margin: 0;
+  color: #f5ab47;
+  font-size: 14px;
+}
+

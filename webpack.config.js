@@ -14,10 +14,8 @@ module.exports ={
                 changeOrigin: true
             }
         },
-
         port: 3000,
     },
-
 
     module: {
         rules: [
@@ -28,8 +26,6 @@ module.exports ={
                     loader: "babel-loader"
                 }
             },
-
-
             //https://stackoverflow.com/a/52327855/7857134
             {
                 test: /\.(sa|sc|c)ss$/,
@@ -44,14 +40,11 @@ module.exports ={
                             importLoaders: 1,
                             localIdentName: "[name]_[local]_[hash:base64]", //[name] = component name , [local]= name of class or id, [hash]=makes a unique hash for every css component
                             sourceMap: true,
-
                         }
                     },
 
                     'sass-loader'
                 ]
-
-
             },
 
             {
@@ -61,14 +54,8 @@ module.exports ={
                 ]
             },
 
-            // {
-            //     test: /\.(woff|woff2|eot|ttf|otf)$/,
-            //     use:['file-loader']
-            // }
-
             { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader" },
             { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader" },
-
         ]
     },
 

@@ -1,9 +1,25 @@
 $MAX_WIDTH: 130rem;
 $MIN_WIDTH: 32rem;
+
+
+$i_phones: 375px;
+$i_phone_plus: 414px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 $hi_res_desktop: 1281px;
-$xl-width : 2560px;
+$xl-width : 1824px;
+
+@mixin i_phones{
+  @media (min-width: #{$i_phones} ){
+    @content;
+  }
+}
+
+@mixin i_phone_plus{
+  @media (min-width: #{$i_phone_plus} ){
+    @content;
+  }
+}
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) {
@@ -21,7 +37,6 @@ $xl-width : 2560px;
     @content;
   }
 }
-
 
 @mixin xl_4k {
   @media (min-width: #{$xl-width}) {

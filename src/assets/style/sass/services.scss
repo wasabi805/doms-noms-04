@@ -37,6 +37,7 @@
       font-family: Deadmobil;
       display: inline;
       align-self: center;
+      font-size: 2.8em;
     }
 
     .offer_container {
@@ -97,8 +98,15 @@
           text-align: justify;
           word-spacing: 1px;
           line-height: 21px;
-          padding: 0 calc(20vw);
+          font-size: 1.2em;
+
+          padding: 0 calc(5vw);
           margin: 0;
+
+          @include i_phone_plus{
+            //padding: 0 calc(20vw);
+            padding: 0 calc(12vw);
+          }
 
 
           @include tablet {

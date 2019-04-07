@@ -1,8 +1,11 @@
-import {GET_ERRORS} from "../types";
-
+import {GET_ERRORS, VIEW_ERRORS} from "../types";
 import * as Actions from '../actions';
 
-const INITIAL_STATE ={};
+export const INITIAL_STATE ={
+
+};
+
+
 
 export default function reducer(state=INITIAL_STATE, action=Actions) {
 
@@ -13,7 +16,12 @@ export default function reducer(state=INITIAL_STATE, action=Actions) {
         case GET_ERRORS:
             return action.payload;
 
+        case VIEW_ERRORS:
+            return action.payload;
+
+
         default:
             return state;
     }
 }
+
