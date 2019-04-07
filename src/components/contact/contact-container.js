@@ -16,7 +16,6 @@ const mapStateToProps = (state) => {
     return({
         sendEmailToDomino : state.sendEmailToDomino,
         errors:state.errors,
-
     })
 
 };

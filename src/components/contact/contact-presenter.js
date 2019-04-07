@@ -22,6 +22,7 @@ class Presenter extends Component{
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     //UPDATE this.state with errors from this.props
@@ -52,6 +53,8 @@ class Presenter extends Component{
             // console.log("how many times do you see this msg?")
             this.props.openFormModal('contact_modal');
         }
+
+
     }
 
     handleChange(e){
@@ -75,6 +78,9 @@ class Presenter extends Component{
             contact_subject: this.state.contact_subject,
             inquire: this.state.inquire,
         };
+        console.log(this.state, 'for spinner');
+
+
         //for debugging:
         // console.log(newInquiry, 'this is getting sent to the server');
         this.props.sendEmailToDomino(newInquiry);
@@ -82,6 +88,7 @@ class Presenter extends Component{
     };
 
     render(){
+
 
         let {contact_name, contact_email, contact_phone, contact_subject, inquire} = this.state.formErrors;
 
@@ -195,7 +202,6 @@ class Presenter extends Component{
 
                     <div className={ContactStyles.contact_button_container}>
                         <button type="submit"  className={`${ContactStyles.stamp} ${ContactStyles.is_approved}`}>Submit</button>
-
                     </div>
 
 
