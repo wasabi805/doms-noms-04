@@ -19,7 +19,7 @@ class Presenter extends Component{
             <React.Fragment>
 
                 <section className={GalleryStyles.gallery}>
-                    <div id='#gallery' className={GalleryStyles.contain}>
+                    <div id='gallery' className={GalleryStyles.contain}>
                         <h1>Gallery</h1>
 
                         {/*Gallery Images*/}
@@ -34,9 +34,9 @@ class Presenter extends Component{
                                     <div className={GalleryStyles.tile__details} onClick={()=> this.props.openFormModal('gallery_modal' , {src: path})}>
 
 
-                                        <div className={GalleryStyles.tile__title}>
-                                            This could be a title
-                                        </div>
+                                        {/*<div className={GalleryStyles.tile__title}>*/}
+                                            {/*This could be a title*/}
+                                        {/*</div>*/}
                                     </div>
                                 </div> )}
                             </div>

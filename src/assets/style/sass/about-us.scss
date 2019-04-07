@@ -30,15 +30,35 @@
 
   .about_us_container{
     object-fit: contain;
+    position: relative;
 
-    img{
-      display: block;
-      width: 100%;
 
+    figure{
+      position: relative;
+      text-align: center;
 
       @include tablet{
-        width: calc(41vw);;
+        padding: 3em 0;
       }
+
+      img{
+        display: block;
+        width: 100%;
+
+        @include tablet{
+          width: calc(41vw);;
+        }
+      }
+    }
+
+    caption{
+      position: relative;
+      padding: 0 2em;
+      border-radius: 3px;
+      top: -48px;
+      color : #c1adad;
+      display: inline-block;
+      background-color: rgba(34, 37, 40, 0.6);
     }
 
     @include tablet{

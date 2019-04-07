@@ -3,7 +3,7 @@ import ModalStyles from '../../assets/style/sass/modals.scss';
 import GalleryStyles from '../../assets/style/sass/gallery.scss'
 
 
-export const ModalContact =(props)=>{
+export const ModalAllPurpose =(props)=>{
     console.log(props, 'isFormModalVisible');
 
     function whichModal() {
@@ -81,4 +81,4 @@ export const ModalContact =(props)=>{
     )
 };
 
-export default ModalContact
+export default ModalAllPurpose

@@ -4,7 +4,7 @@ export const INITIAL_STATE = Map({
 
 
     //Header Component
-    nav_names: ['home ', 'services ' , 'food-menu ' , 'catering ' , 'gallery ' , 'contact '],
+    nav_names: ['home ', 'services ' , 'menu ' , 'gallery ' , 'contact '],
 
 
 
