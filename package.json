@@ -7,7 +7,7 @@
     "server": "nodemon server.js",
     "client": "webpack-dev-server --mode development --open",
     "start": "node server.js",
-    "build": "node server.js && webpack --mode production",
+    "build": "webpack --mode production && node server.js",
     "dev": "concurrently --kill-others \"npm run client\" \"npm run server\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
