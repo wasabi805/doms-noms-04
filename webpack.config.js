@@ -56,7 +56,7 @@ const common = {
 const development ={
     devServer: {
         proxy:{
-            '/api' : {
+            '/api/*' : {
                 target: "http://localhost:5000",
                 changeOrigin: true
             }

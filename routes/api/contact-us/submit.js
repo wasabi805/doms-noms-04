@@ -86,6 +86,8 @@ router.post('/inquire' , cors(),  (req,res)=>{
     };
 
 
+    console.log("IN ROUTE -> Sending email...", msgToDomino)
+
     sgMail.send(msgToDomino).then((success,)=>{
         if(success){
 
@@ -93,8 +95,7 @@ router.post('/inquire' , cors(),  (req,res)=>{
         }
 
     }).catch(err=>{
-        console.log('nope')
-
+        console.log('error: ', err)
     });
 
 // ==========    ==========  =========   ==========+
