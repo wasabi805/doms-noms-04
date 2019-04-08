@@ -1,4 +1,9 @@
 import {Map, List} from 'immutable';
+import chicken  from '../../assets/img/chicken.jpg';
+import domino   from '../../assets/img/domino.jpg';
+import ribs     from '../../assets/img/rig.jpg';
+import rig      from '../../assets/img/ribs.jpg';
+import spice    from '../../assets/img/spice.jpg';
 
 export const INITIAL_STATE = Map({
 
@@ -125,19 +130,19 @@ export const INITIAL_STATE = Map({
         title: 'Gallery',
 
         images: [
-            '../../../src/assets/img/chicken.jpg',
-            '../../../src/assets/img/ribs.jpg',
-            '../../../src/assets/img/rig.jpg',
-            '../../../src/assets/img/spice.jpg',
-            '../../../src/assets/img/chicken.jpg',
-            '../../../src/assets/img/ribs.jpg',
-            '../../../src/assets/img/rig.jpg',
-            '../../../src/assets/img/spice.jpg',
+            chicken,
+            ribs,
+            rig,
+            spice,
+            chicken,
+            ribs,
+            rig,
+            spice,
         ]
     }),
 
     about_us: Map({
-        domino: '../../../src/assets/img/domino.jpg',
+        domino: domino,
         text: 'Stuff About Domino'
     }),
 

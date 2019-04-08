@@ -65,23 +65,6 @@ const development ={
     },
 };
 
-// const production={
-//
-// };
-//
-// console.log(process.env.PORT, 'whats the port??')
-//
-// const environment =()=>{
-//     if(process.env.PORT === undefined){
-//         return development
-//     }
-//
-//     if(process.env.PORT === 'production'){
-//         return production
-//     }
-//
-// };
-
 module.exports = (env, argv) => {
     let config = common;
 
@@ -89,11 +72,6 @@ module.exports = (env, argv) => {
         config = merge(common , development);
     }
 
-    // if (argv.mode === 'production') {
-    //     //...
-    // }
-
     return config;
 };
 
-// module.exports = merge(common , environment());
