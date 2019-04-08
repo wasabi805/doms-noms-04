@@ -78,7 +78,7 @@ router.post('/inquire' , cors(),  (req,res)=>{
 
     //see : https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770
     const msgToDomino = {
-        to: process.env.TEST_EMAIL,
+        to: process.env.DOMINO_EMAIL,
         from: 'noreply@proletdev.com',
         subject: `${newInquiry.contact_subject}`,
         text: `${newInquiry.inquire}`,
