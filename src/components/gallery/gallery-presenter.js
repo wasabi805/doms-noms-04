@@ -1,12 +1,13 @@
 import React,{Component} from 'react';
 import GalleryStyles from '../../assets/style/sass/gallery.scss';
 
-// import PropTypes from 'prop-types';
+import chicken  from '../../assets/img/chicken.jpg';
+import domino   from '../../assets/img/domino.jpg';
+import ribs     from '../../assets/img/rig.jpg';
+import rig      from '../../assets/img/ribs.jpg';
+import spice    from '../../assets/img/spice.jpg';
 
-// const Presenter = ({title, images}) => {
-//
-//
-// };
+// import PropTypes from 'prop-types';
 
 class Presenter extends Component{
     constructor(props){
