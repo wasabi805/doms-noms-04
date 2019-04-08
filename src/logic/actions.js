@@ -5,7 +5,7 @@ import {GET_ERRORS, VIEW_ERRORS} from "./types";
 import axios from 'axios';
 
 export const sendEmailToDomino = newInquiry => dispatch=>{
-    axios.post('http://localhost:5000/api/contact-us/submit/inquire', newInquiry)
+    axios.post('/api/contact-us/submit/inquire', newInquiry)
         .then(res=> {
 
             // console.log(res.data, 'res.data')
