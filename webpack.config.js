@@ -1,22 +1,13 @@
+const merge = require('webpack-merge');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
     filename: "./index.html"
 });
 
-module.exports ={
-
-    devServer: {
-        proxy:{
-            '/api' : {
-                target: "http://localhost:5000",
-                changeOrigin: true
-            }
-        },
-        port: 3000,
-    },
-
+const common = {
     module: {
         rules: [
             {
@@ -61,3 +52,48 @@ module.exports ={
 
     plugins: [htmlPlugin]
 };
+
+const development ={
+    devServer: {
+        proxy:{
+            '/api' : {
+                target: "http://localhost:5000",
+                changeOrigin: true
+            }
+        },
+        port: 3000,
+    },
+};
+
+// const production={
+//
+// };
+//
+// console.log(process.env.PORT, 'whats the port??')
+//
+// const environment =()=>{
+//     if(process.env.PORT === undefined){
+//         return development
+//     }
+//
+//     if(process.env.PORT === 'production'){
+//         return production
+//     }
+//
+// };
+
+module.exports = (env, argv) => {
+    let config = common;
+
+    if (argv.mode === 'development') {
+        config = merge(common , development);
+    }
+
+    // if (argv.mode === 'production') {
+    //     //...
+    // }
+
+    return config;
+};
+
+// module.exports = merge(common , environment());
