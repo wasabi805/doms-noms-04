@@ -1,5 +1,41 @@
 @import "constants/width";
 
+@font-face {
+  font-family: Alcubierre;
+  src: url("../../../assets/fonts/Alcubierre.woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Deadmobil;
+  src: url("../../../assets/fonts/Deadmobil.woff2");
+  src: url("../../../assets/fonts/Deadmobil.woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Leafy;
+  src: url("../../../assets/fonts/Leafy.woff");
+  src: url("../../../assets/fonts/Leafy.woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Le Super Serif";
+  src: url("../../../assets/fonts/LeSuperSerif.woff");
+  src: url("../../../assets/fonts/LeSuperSerif.woff2");
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Standaris;
+  src: url("../../../assets/fonts/Standaris.woff");
+  font-style: normal;
+}
+
+
 .page{
   background-color: black;
 }

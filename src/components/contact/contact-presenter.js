@@ -5,6 +5,7 @@ import FormStyles from '../../assets/style/css/bootstrap.css';
 import classNames from 'classnames'
 import PropTypes from 'prop-types';
 
+
 class Presenter extends Component{
     constructor(props){
 
@@ -34,7 +35,6 @@ class Presenter extends Component{
             this.setState({
                 formErrors : nextProps.errors
             })
-
         }
     }
 
@@ -62,12 +62,14 @@ class Presenter extends Component{
     }
 
     handleChange(e){
+        e.preventDefault();
+
         this.setState({
-            [e.target.name]: e.target.value,
+            [e.target.name] :  e.target.value,
 
         }, ()=>{
             //for testing:
-            // console.log(this.state.inquire, 'this is whats in state')
+            console.log(this.state.contact_last_name, 'this is input')
         });
     };
 
@@ -93,7 +95,10 @@ class Presenter extends Component{
 
     };
 
+
+
     render(){
+
 
         let btnText = this.state.loading ? ['Submit', <i class="fas fa-sync fa-spin"></i>] : 'Submit';
 
@@ -131,7 +136,7 @@ class Presenter extends Component{
 
                             <div className={ContactStyles.form_field}>
                                 <input
-                                    id="contact-name"
+                                    id="contact_first_name"
                                     className={FormStyles.form_control}
                                     type="text"
                                     name='contact_first_name'
@@ -148,7 +153,7 @@ class Presenter extends Component{
 
                             <div className={ContactStyles.form_field}>
                                 <input
-                                    id="contact-name"
+                                    id="contact_last_name"
                                     className={FormStyles.form_control}
                                     type="text"
                                     name='contact_last_name'
