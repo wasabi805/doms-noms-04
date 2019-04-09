@@ -12,10 +12,13 @@ class Presenter extends Component{
 
         this.state={
             contact_name : '',
+            contact_first_name : '',
+            contact_last_name : '',
             contact_email : '',
             contact_phone: '',
             contact_subject: '',
             inquire: '',
+            loading: false,
 
             formErrors: "",
         };
@@ -41,10 +44,13 @@ class Presenter extends Component{
         if(this.state.formErrors === 'display_modal'){ //Reminder: display_modal is coming from the server.
             this.setState({
                 contact_name : '',
+                contact_first_name : '',
+                contact_last_name : '',
                 contact_email : '',
                 contact_phone: '',
                 contact_subject: '',
                 inquire: '',
+                loading: false,
 
                 formErrors: "",
                 opacity: 1,
@@ -53,8 +59,6 @@ class Presenter extends Component{
             // console.log("how many times do you see this msg?")
             this.props.openFormModal('contact_modal');
         }
-
-
     }
 
     handleChange(e){
@@ -70,16 +74,18 @@ class Presenter extends Component{
 
     handleSubmit(e ){
         e.preventDefault();
-
         const newInquiry = {
             contact_name : this.state.contact_name,
+            contact_first_name: this.state.contact_first_name,
+            contact_last_name: this.state.contact_last_name,
             contact_email: this.state.contact_email,
             contact_phone: this.state.contact_phone,
             contact_subject: this.state.contact_subject,
             inquire: this.state.inquire,
         };
-        console.log(this.state, 'for spinner');
 
+        this.setState({loading: true});
+        console.log(this.state, 'for spinner');
 
         //for debugging:
         // console.log(newInquiry, 'this is getting sent to the server');
@@ -89,8 +95,10 @@ class Presenter extends Component{
 
     render(){
 
+        let btnText = this.state.loading ? ['Submit', <i class="fas fa-sync fa-spin"></i>] : 'Submit';
 
-        let {contact_name, contact_email, contact_phone, contact_subject, inquire} = this.state.formErrors;
+
+        let {contact_first_name, contact_last_name,  contact_email, contact_phone, contact_subject, inquire} = this.state.formErrors;
 
         return(
             <section id='contact' className={ContactStyles.contact}>
@@ -104,25 +112,56 @@ class Presenter extends Component{
                     <div className={FormStyles.form_group}>
                         <div className={FormStyles.column_left}>
 
-                           <div className={ContactStyles.form_field}>
-                               <input
-                                   id="contact-name"
-                                   className={FormStyles.form_control}
-                                   type="text"
-                                   name='contact_name'
+                           {/*<div className={ContactStyles.form_field}>*/}
+                               {/*<input*/}
+                                   {/*id="contact-name"*/}
+                                   {/*className={FormStyles.form_control}*/}
+                                   {/*type="text"*/}
+                                   {/*name='contact_name'*/}
 
-                                   value={this.state.contact_name}
-                                   onChange={this.handleChange}
+                                   {/*value={this.state.contact_name}*/}
+                                   {/*onChange={this.handleChange}*/}
 
-                                   placeholder="NAME:"/>
+                                   {/*placeholder="NAME:"/>*/}
+                                   {/**/}
+                               {/*<small className={classNames(`${ContactStyles.form_error_field}` , 'show-form-error')}>*/}
+                                   {/*{contact_name}*/}
+                               {/*</small>*/}
+                           {/*</div>*/}
 
+                            <div className={ContactStyles.form_field}>
+                                <input
+                                    id="contact-name"
+                                    className={FormStyles.form_control}
+                                    type="text"
+                                    name='contact_first_name'
 
-                               <small className={classNames(`${ContactStyles.form_error_field}` , 'show-form-error')}>
+                                    value={this.state.contact_first_name}
+                                    onChange={this.handleChange}
 
-                                   {contact_name}
+                                    placeholder="FIRST NAME:"/>
 
-                               </small>
-                           </div>
+                                <small className={classNames(`${ContactStyles.form_error_field}` , 'show-form-error')}>
+                                    {contact_first_name}
+                                </small>
+                            </div>
+
+                            <div className={ContactStyles.form_field}>
+                                <input
+                                    id="contact-name"
+                                    className={FormStyles.form_control}
+                                    type="text"
+                                    name='contact_last_name'
+
+                                    value={this.state.contact_last_name}
+                                    onChange={this.handleChange}
+
+                                    placeholder="LAST NAME:"/>
+
+                                <small className={classNames(`${ContactStyles.form_error_field}` , 'show-form-error')}>
+                                    {contact_last_name}
+                                </small>
+                            </div>
 
 
                             <div className={ContactStyles.form_field}>
@@ -184,7 +223,7 @@ class Presenter extends Component{
                             <div className={ContactStyles.form_field}>
                                 <textarea
                                     className={FormStyles.form_control}
-                                    rows="16" placeholder="How can we help you today??"
+                                    rows="21" placeholder="How can we help you today??"
                                     name='inquire'
                                     value={this.state.inquire}
                                     onChange={this.handleChange}
@@ -201,7 +240,10 @@ class Presenter extends Component{
                     </div>
 
                     <div className={ContactStyles.contact_button_container}>
-                        <button type="submit"  className={`${ContactStyles.stamp} ${ContactStyles.is_approved}`}>Submit</button>
+                        <button type="submit"
+                                className={`${ContactStyles.stamp} ${ContactStyles.is_approved}`}>
+                            {btnText}
+                        </button>
                     </div>
 
 

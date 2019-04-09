@@ -5,11 +5,7 @@ export const INITIAL_STATE ={
 
 };
 
-
-
 export default function reducer(state=INITIAL_STATE, action=Actions) {
-
-    // console.log(Actions.setErrors().type, 'from the logic-reducer');
 
     switch(action.type){
 

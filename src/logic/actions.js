@@ -7,9 +7,7 @@ import axios from 'axios';
 export const sendEmailToDomino = newInquiry => dispatch=>{
     axios.post('/api/contact-us/submit/inquire', newInquiry)
         .then(res=> {
-
             // console.log(res.data, 'res.data')
-
             dispatch({
                 type: GET_ERRORS,
                 payload: res.data,
