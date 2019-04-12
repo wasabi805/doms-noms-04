@@ -176,7 +176,7 @@ $moveRight : $tileWidth * ($growFactor - 1);
   position: relative;
   display: inline-block;
   /* margin: 0 auto; */
-  top: 17%;
+  top: 7%;
   /* left: 12%; */
   max-width: 500px;
   z-index: 101;
@@ -185,8 +185,16 @@ $moveRight : $tileWidth * ($growFactor - 1);
   color: #be522d;
   border-radius: 10px;
 
-  @include desktop{
-    max-width: 692px;
+  @include tablet{
+    max-width: 460px;
+  }
+
+  @include laptop {
+    max-width: 575px
+  }
+
+  @include desktop {
+    max-width: 785px;
   }
 }
 

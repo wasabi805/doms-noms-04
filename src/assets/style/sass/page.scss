@@ -37,7 +37,13 @@
 
 
 .page{
+  position: relative;
   background-color: black;
+  margin-top: 12%;
+
+  @include tablet{
+    margin-top: 8%;
+  }
 }
 
 

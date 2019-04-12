@@ -68,7 +68,7 @@
           color: #e0aa30;
           font-size: 3.5em;
 
-          @include desktop{
+          @include laptop {
             font-size: 5em;
           }
 
@@ -116,7 +116,7 @@
 
           }
 
-          @include desktop{
+          @include laptop {
             padding: 0;
             margin: 6rem;
             font-size: 3.1rem;

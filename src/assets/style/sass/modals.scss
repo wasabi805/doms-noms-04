@@ -39,23 +39,29 @@
     align-items: center;
     justify-content: center;
     background-color: lime;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto;
 
     transform: translate(0% , -50%);
     border-radius: 50% 50%;
-    font-size: 80px;
+    font-size: 50px;
     color: white;
     box-shadow: 0 8px 6px -6px black;
 
     @include tablet{
-      width: 125px;
-      height: 125px;
+      font-size: 80px;
+      width: 145px;
+      height: 145px;
+    }
+
+    @include laptop {
+      font-size: 100px;
     }
 
     @include desktop{
-      font-size: 100px;
+      width: 195px;
+      height: 195px
     }
 
     //@include desktop_2{
@@ -72,24 +78,32 @@
     bottom: 52px;
     position: relative;
 
-    @include desktop_2{
+    @include desktop {
       bottom: 102px;
     }
 
     h1{
-      font-size: 52px;
+      font-size: 42px;
       margin: 0;
 
-      @include desktop_2{
+      @include tablet{
+        font-size: 52px;
+      }
+
+      @include desktop {
         font-size: 104px;
       }
     }
 
     p{
-      font-size: 26px;
+      font-size: 16px;
       margin: 0;
 
-      @include desktop_2{
+      @include tablet{
+        font-size: 26px;
+      }
+
+      @include desktop {
         font-size: 50px;
       }
     }
@@ -152,3 +166,30 @@
   }
 }
 
+.mobile_menu_container{
+  position: relative;
+
+  font-family: Alcubierre;
+  margin: 50px 10px;
+  color: white;
+  font-size: 24px;
+  z-index: 100;
+
+  a{
+    color: white;
+    
+    &:hover{
+      color: #85ad67;
+    }
+  }
+
+
+  div{
+    outline: 1px solid white;
+    outline-offset: -10px;
+    display: inline-block;
+    width: 50%;
+    padding: 1em;
+    padding-top: 2em;
+  }
+}

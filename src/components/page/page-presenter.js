@@ -37,6 +37,8 @@ class Presenter extends Component{
 
     openFormModal(modal_type , data){
 
+        console.log(modal_type, 'modal_type')
+
         let context = {
             isFormModalVisible : 'block',
             spinner: false,
@@ -76,8 +78,11 @@ class Presenter extends Component{
                     src={this.state.src}
                 />
 
+
+                <HeaderContainer openFormModal={this.openFormModal}/>
+
+
                 <div className={PageStyle.page} style={blurBg}>
-                    <HeaderContainer/>
                     <HeroContainer/>
                     <StoryContainer/>
                     <ServicesContainer/>

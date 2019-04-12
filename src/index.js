@@ -13,7 +13,6 @@ library.add(
     faUtensils ,
     faTruck,
     faGlassCheers,
-
 );
 
 

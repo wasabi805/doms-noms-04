@@ -31,7 +31,7 @@
 
       -webkit-font-smoothing: antialiased;
 
-      @include desktop{
+      @include laptop {
         font-size: 1.2em;
         color: #fff;
         text-align: justify;
@@ -74,7 +74,7 @@
     }
 
 
-    @include desktop_2{
+    @include desktop {
       font-size: 7rem;
     }
 
@@ -96,7 +96,7 @@
     }
 
 
-    @include desktop {
+    @include laptop {
       //background-color: lime;
 
       font-size: 3rem;

@@ -151,7 +151,7 @@
         font-weight: lighter;
       }
 
-      @include desktop{
+      @include laptop {
         h1{
           font-size: 20em;
         }
