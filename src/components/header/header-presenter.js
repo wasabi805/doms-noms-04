@@ -10,19 +10,19 @@ const Presenter = (props) => {
 
     return (
         <header  className={HeaderStyle.page_header}>
-            <MobileMenu openFormModal={props.openFormModal}/>
+            <MobileMenu
+                openFormModal={props.openFormModal}
+                closeFormModal={props.closeFormModal}
+                toggleModal={props.toggleModal}
+                isFormModalVisible={props.isFormModalVisible}
+            />
 
             <div className={HeaderStyle.logo_area}>
-                {/*<label className="btn" htmlFor="modal-1"*/}
-                {/*onClick={props.handleNavModalClick}>*/}
-                {/*<i className="fas fa-bars" />*/}
-                {/*</label>*/}
-
                 {/*DOMS NOMS LOGO*/}
                 <img src={logo} alt={''}/>
             </div>
 
-            {/*Home | Services | Menu | catering | Gallery | Contact*/}
+            {/*Home | Services | Menu | Catering | Gallery | Contact*/}
             <NavLinksContainer/>
 
         </header>

@@ -5,7 +5,6 @@ import FormStyles from '../../assets/style/css/bootstrap.css';
 import classNames from 'classnames'
 import PropTypes from 'prop-types';
 
-
 class Presenter extends Component{
     constructor(props){
 
@@ -95,14 +94,11 @@ class Presenter extends Component{
 
     };
 
-
-
     render(){
 
+        console.log( this.state, 'yo')
 
         let btnText = this.state.loading ? ['Submit', <i class="fas fa-sync fa-spin"></i>] : 'Submit';
-
-
         let {contact_first_name, contact_last_name,  contact_email, contact_phone, contact_subject, inquire} = this.state.formErrors;
 
         return(
@@ -116,23 +112,6 @@ class Presenter extends Component{
 
                     <div className={FormStyles.form_group}>
                         <div className={FormStyles.column_left}>
-
-                           {/*<div className={ContactStyles.form_field}>*/}
-                               {/*<input*/}
-                                   {/*id="contact-name"*/}
-                                   {/*className={FormStyles.form_control}*/}
-                                   {/*type="text"*/}
-                                   {/*name='contact_name'*/}
-
-                                   {/*value={this.state.contact_name}*/}
-                                   {/*onChange={this.handleChange}*/}
-
-                                   {/*placeholder="NAME:"/>*/}
-                                   {/**/}
-                               {/*<small className={classNames(`${ContactStyles.form_error_field}` , 'show-form-error')}>*/}
-                                   {/*{contact_name}*/}
-                               {/*</small>*/}
-                           {/*</div>*/}
 
                             <div className={ContactStyles.form_field}>
                                 <input

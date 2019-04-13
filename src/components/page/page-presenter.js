@@ -27,6 +27,7 @@ class Presenter extends Component{
         this.openFormModal = this.openFormModal.bind(this);
         this.closeFormModal = this.closeFormModal.bind(this);
         this.loadSpinner = this.loadSpinner.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
     }
 
     loadSpinner(){
@@ -36,9 +37,6 @@ class Presenter extends Component{
     }
 
     openFormModal(modal_type , data){
-
-        console.log(modal_type, 'modal_type')
-
         let context = {
             isFormModalVisible : 'block',
             spinner: false,
@@ -64,6 +62,11 @@ class Presenter extends Component{
         })
     }
 
+
+    toggleModal(check){
+
+    }
+
     render(){
 
         let blurBg = this.state.isFormModalVisible === 'block' ? {filter: 'blur(10px)', overflow: 'hidden'} : {};
@@ -79,7 +82,12 @@ class Presenter extends Component{
                 />
 
 
-                <HeaderContainer openFormModal={this.openFormModal}/>
+                <HeaderContainer
+                    openFormModal={this.openFormModal}
+                    closeFormModal={this.closeFormModal}
+                    toggleModal={this.toggleModal}
+                    isFormModalVisible={this.state.isFormModalVisible}
+                />
 
 
                 <div className={PageStyle.page} style={blurBg}>

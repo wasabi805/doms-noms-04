@@ -2,10 +2,6 @@ import React from 'react';
 import FoodMenuStyles from '../../assets/style/sass/food-menu.scss'
 // import PropTypes from 'prop-types';
 
-
-import MenuColumn from './menu-column';
-import Footer from './footer';
-
 const Presenter = ({food_menu_content, food_menu_footer, logo}) => {
 
     return(

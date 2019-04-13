@@ -156,29 +156,13 @@ export const INITIAL_STATE = Map({
 
 
     contact: Map({
-        form: Map({
-            name: Map({
-                input: '',
-                hasError: false,
-            }),
-            phone: Map({
-                input: '',
-                hasError: false,
-            }),
-            email: Map({
-                input: '',
-                hasError: false,
-            }),
-            subject: Map({
-                input: '',
-                hasError: false,
-            }),
-            message: Map({
-                input: '',
-                hasError: false,
-            }),
-        }),
-        error: '',
+        inputs: List([
+            Map({name: 'contact_first_name' , placeholder: 'FIRST NAME:'}),
+            Map({name: 'contact_last_name' , placeholder: 'LAST NAME:'}),
+            Map({name: 'contact-email' , placeholder: 'EMAIL:'}),
+            Map({name: 'contact-phone' , placeholder: 'PHONE:'}),
+            Map({name: 'contact-subject' , placeholder: 'SUBJECT:'}),
+        ]),
     }),
 
 });

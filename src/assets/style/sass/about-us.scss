@@ -29,6 +29,7 @@
     position: relative;
 
 
+
     figure{
       position: relative;
       text-align: center;
@@ -47,14 +48,21 @@
       }
     }
 
-    caption{
+    figcaption{
       position: relative;
-      padding: 0 2em;
-      border-radius: 3px;
-      top: -48px;
-      color : #c1adad;
+      border-radius: 1px;
+      top: -37px;
+      color : #f3e2e2;
       display: inline-block;
-      background-color: rgba(34, 37, 40, 0.6);
+
+
+      h5{
+        font-family: Alcubierre;
+        padding: 0px 6px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgba(34, 37, 40, 0.6);
+      }
     }
 
     @include tablet{

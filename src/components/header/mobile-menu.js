@@ -1,12 +1,11 @@
 import React from 'react'
 import HeaderStyles from '../../assets/style/sass/header.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const MobileMenu =(props)=>{
-    console.log(props, 'whats props?')
-
     return(
-        <div className={HeaderStyles.mobile_menu} onClick={()=>props.openFormModal('mobile-menu')}>
+        <div className={HeaderStyles.mobile_menu}
+             onClick={()=>props.isFormModalVisible !== 'block' ?  props.openFormModal('mobile-menu'): props.closeFormModal()  }>
 
             <i className="fas fa-bars"/>
         </div>

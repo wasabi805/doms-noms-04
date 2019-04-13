@@ -19,7 +19,7 @@ router.post('/inquire' , cors(),  (req,res)=>{
 
     //CHECK VALIDATION :  if isValid === false, that means there were errors on the form, return the errors so they can be displayed to the user.
     if(!isValid){
-        console.log(errors, 'YOU GOT errors : errorReducer');
+        // console.log(errors, 'YOU GOT errors : errorReducer');
         res.send(errors)
     }
 
@@ -28,7 +28,7 @@ router.post('/inquire' , cors(),  (req,res)=>{
     //see https://www.npmjs.com/package/@sendgrid/mail
     const sgMail = require('@sendgrid/mail');
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    console.log('the inquire route was hit' );
+    // console.log('the inquire route was hit' );
 
 
     let newInquiry= {
@@ -158,9 +158,7 @@ router.post('/inquire' , cors(),  (req,res)=>{
 
 
     const email = [msgToUser, msgToDomino];
-
-
-    console.log("IN ROUTE -> Sending email..." , 'try to start spinner here')
+    // console.log("IN ROUTE -> Sending email..." , 'try to start spinner here');
 
     sgMail.send(email).then((success,)=>{
         if(success){

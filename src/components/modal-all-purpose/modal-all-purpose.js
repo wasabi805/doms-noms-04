@@ -4,15 +4,12 @@ import GalleryStyles from '../../assets/style/sass/gallery.scss'
 
 
 export const ModalAllPurpose =(props)=>{
-    console.log(props, 'isFormModalVisible');
 
     function whichModal() {
+
         if(props.modal_type === 'contact_modal'){
-
-
             return(
                 <div className={ModalStyles.form_modal}>
-
                     <div className={ModalStyles.container}>
 
                         <div className={ModalStyles.check}>
@@ -35,7 +32,6 @@ export const ModalAllPurpose =(props)=>{
         }else if(props.modal_type === 'gallery_modal'){
 
             return(
-
 
                 <div className={GalleryStyles.gallery_modal}>
                         <div className={GalleryStyles.container}>
@@ -97,11 +93,12 @@ export const ModalAllPurpose =(props)=>{
     }
 
     return(
-        <div style={{display : `${props.isFormModalVisible}`}}  className={GalleryStyles.modal_background}  onClick={props.closeFormModal}>
+        <div style={{display : `${props.isFormModalVisible}`}}
+             className={GalleryStyles.modal_background}
+             onClick={props.closeFormModal}>
+
             {whichModal()}
         </div>
-
-
     )
 };
 

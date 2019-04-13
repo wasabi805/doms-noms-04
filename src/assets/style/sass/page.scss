@@ -39,10 +39,10 @@
 .page{
   position: relative;
   background-color: black;
-  margin-top: 12%;
+  margin-top: 11%;
 
   @include tablet{
-    margin-top: 8%;
+    margin-top: 6%;
   }
 }
 

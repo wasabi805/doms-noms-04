@@ -111,6 +111,10 @@ $error-input-border: solid 0.2rem $red;
 
 .form_field{
   margin: 26px 0;
+
+  textarea {
+    resize: none;
+  }
 }
 
 .form_error_text_box{

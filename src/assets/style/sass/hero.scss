@@ -136,14 +136,13 @@
   }
 
   .overlay_text_container{
-    transform: translateY(50%);
     font-size: 6px;;
 
     //THE TITLE
     h1{
       font-family: 'Standaris' , sans-serif , 'BRUX';
       color: #dad3d3;
-      font-size: 8em;
+      font-size: 11em;
 
 
       @include tablet{
