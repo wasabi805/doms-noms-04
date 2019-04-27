@@ -39,7 +39,7 @@ export const INITIAL_STATE = Map({
         Map({
             title: 'Events',
             fa_icon: 'glass-cheers', //need pro version
-            description: `Whether a Backyard BBQ , Family Reunion, or Open House, we can bring the event to you! With access to tent, chair, table and linen rentals- we are the ONLY call you need to make before your event starts.`
+            description: `Whether a Backyard BBQ , Family Reunion, or Open House, we can bring the event to you! With access to tents, chairs, tables & linens. We are the ONLY call you need to make before your event starts.`
         }),
         Map({
             title: 'Delivery',
@@ -92,7 +92,7 @@ export const INITIAL_STATE = Map({
                 {id: 300,  name: 'Brisket', descrip: 'So Fresh We literally just shot the cow!'},
                 {id: 301,  name: 'Roasted Ribeye', descrip: 'Juicy Ribeye accompanied with Au jus.'},
                 {id: 302,  name: 'Seared Sirloin', descrip: 'Sirloin Cut w/ Mushroom peppercorn Sauce'},
-                {id: 303,  name: 'Steak Fajatas ', descrip: 'Grilled Beef Fajitas w/ sautéed onion & peppers'},
+                {id: 303,  name: 'Steak Fajitas ', descrip: 'Grilled Steak Fajitas w/ sautéed onion & peppers'},
 
                 //  Pork
                 {id: 304, name: "DOM's NOMS Pulled Pork", descrip: 'All Natural bone in pork butt charred & smoked for 10 hrs!'},
@@ -102,7 +102,7 @@ export const INITIAL_STATE = Map({
                 {id: 308, name: 'Marinated Pork Loin', descrip: 'Served with a w/balsamic, cranberry sauce.'},
 
                 //Chicken
-                {id: 309, name: 'Jerk Chicken', descrip: 'Marinated in Authentic Caribbean spices'},
+                {id: 309, name: 'Jerk Chicken', descrip: 'Juicy chicken thighs marinated with an authentic blend of Caribbean spices'},
                 {id: 310, name: 'Herb Roasted Chicken', descrip: 'Marinated w/ a rustic seasoned blend of spices topped with a Marsala sauce. '},
 
                 //Burgers

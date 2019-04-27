@@ -38,10 +38,10 @@
   position: absolute;
   top: 0;
   opacity: 0.4;
-  background-color: #292626c2;
   width: 100vw;
   height: calc(100%);
   z-index: 3;
+
 
   @media only screen and (min-width: 768px ) {
 
@@ -141,6 +141,7 @@
     //THE TITLE
     h1{
       font-family: 'Standaris' , sans-serif , 'BRUX';
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
       color: #dad3d3;
       font-size: 11em;
 
@@ -163,6 +164,7 @@
     }
 
     p {
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
       font-size: 3em;
       color:#999;
       margin-top: 3px;

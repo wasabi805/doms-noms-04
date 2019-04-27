@@ -75,6 +75,7 @@ class Presenter extends Component{
 
     handleSubmit(e ){
         e.preventDefault();
+        
         const newInquiry = {
             contact_name : this.state.contact_name,
             contact_first_name: this.state.contact_first_name,
