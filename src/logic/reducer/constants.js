@@ -130,14 +130,21 @@ export const INITIAL_STATE = Map({
         title: 'Gallery',
 
         images: [
+            spice,
+            "https://doms-noms.s3.amazonaws.com/IMG_0846.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_0847.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_0953.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_0954.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_1104.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_1313.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_1380.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_1381.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_1382.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_1383.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_1384.JPG",
+            "https://doms-noms.s3.amazonaws.com/IMG_1385.JPG",
             chicken,
             ribs,
-            rig,
-            spice,
-            chicken,
-            ribs,
-            rig,
-            spice,
         ]
     }),
 
