@@ -33,6 +33,7 @@
     figure{
       position: relative;
       text-align: center;
+      display: inline-block;
 
       @include tablet{
         padding: 3em 0;

@@ -8,8 +8,8 @@ const Presenter = ({about_us}) => {
         <section className={AboutUsStyles.about_us}>
             <div className={AboutUsStyles.about_us_container}>
 
-               <figure>
-                   <img className={AboutUsStyles.profile_img} src={about_us} alt=''/>
+               <figure className={AboutUsStyles.profile_img}>
+                   <img src={about_us} alt=''/>
                    <figcaption>
                        <h5>Chef Owner | Domino Corcega</h5>
                    </figcaption>
