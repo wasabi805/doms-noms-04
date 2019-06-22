@@ -15,7 +15,7 @@ export const INITIAL_STATE = Map({
 
 
     //Hero Component
-    hero_background : ['https://streamable.com/s/lp7w1/opekoi?autoplay=1&muted=1'],
+    hero_background : ['https://doms-noms.s3.amazonaws.com/lp7w1.mp4'],
 
     //Story Component
     story: Map({
