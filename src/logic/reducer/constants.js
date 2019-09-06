@@ -89,7 +89,7 @@ export const INITIAL_STATE = Map({
 
                 //  Red Meat
 
-                {id: 300,  name: 'Brisket', descrip: 'So Fresh We literally just shot the cow!'},
+                {id: 300,  name: 'Brisket', descrip: 'Savory & tender smoked perfection.'},
                 {id: 301,  name: 'Roasted Ribeye', descrip: 'Juicy Ribeye accompanied with Au jus.'},
                 {id: 302,  name: 'Seared Sirloin', descrip: 'Sirloin Cut w/ Mushroom peppercorn Sauce'},
                 {id: 303,  name: 'Steak Fajitas ', descrip: 'Grilled Steak Fajitas w/ sautéed onion & peppers'},
