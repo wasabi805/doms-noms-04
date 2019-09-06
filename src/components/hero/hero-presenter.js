@@ -12,7 +12,10 @@ const Presenter = ({video_landing}) => {
             <div className={HeroStyle.content}>
                 <div className={HeroStyle.iframe_container}>
                     <div id='home' className={HeroStyle.overlay}/>
-                    <iframe title='bbq-video-background' src={video_landing} />
+                    <video width={'100%'} autoPlay={true} muted={true} >
+                        <source src={video_landing} type="video/mp4" />
+                    </video>
+
                 </div>
 
                 <div className={HeroStyle.overlay_content}>
