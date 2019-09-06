@@ -15,7 +15,6 @@ $moveRight : $tileWidth * ($growFactor - 1);
   background: #0E0F11;
   color: #ecf0f1;
   font-family: 'Open Sans', sans-serif;
-  //min-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,7 +48,6 @@ $moveRight : $tileWidth * ($growFactor - 1);
   }
 
   a:hover{
-    color: lime;
     text-decoration: underline;
   }
 
@@ -105,7 +103,7 @@ $moveRight : $tileWidth * ($growFactor - 1);
     top: 0;
     font-size: 10px;
     opacity: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    //background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
     transition: $duration opacity;
 
     &:hover{
