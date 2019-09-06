@@ -23,9 +23,9 @@ const Presenter = ({food_menu_content, food_menu_footer, logo}) => {
                                     <h2 className={FoodMenuStyles.food_grouping}> {items.title}</h2>
 
                                     {items.courses.map(z=>{
-                                        return <div key={z.id} id={z.id}>
+                                        return <div key={z.id} id={z.id} className={FoodMenuStyles.food_descrip} >
                                             <h4 className={FoodMenuStyles.food_name}>{z.name}</h4>
-                                            <p className={FoodMenuStyles.food_descrip}>{z.descrip}</p>
+                                            <p>{z.descrip}</p>
                                         </div>
                                     })}
                                 </div>
@@ -44,9 +44,9 @@ const Presenter = ({food_menu_content, food_menu_footer, logo}) => {
 
 
                                 {items.courses.map(z=>{
-                                    return <div key={z.id} id={z.id}>
+                                    return <div key={z.id} id={z.id} className={FoodMenuStyles.food_descrip} >
                                         <h4 className={FoodMenuStyles.food_name}>{z.name}</h4>
-                                        <p className={FoodMenuStyles.food_descrip}>{z.descrip}</p>
+                                        <p >{z.descrip}</p>
                                     </div>
 
                                 })}

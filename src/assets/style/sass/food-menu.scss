@@ -211,10 +211,6 @@
   font-weight: bolder;
 }
 
-.food_menu_header{
-
-}
-
 .food_name{
   font-family: "Le Super Serif";
   color: black;
@@ -249,20 +245,24 @@
 }
 
 .food_descrip{
-  font-family: sans-serif;
-  color: #222324;
+  font-family: 'Roboto', sans-serif;
+  color: #505050;
   padding: 0 38px;
-  font-weight: lighter;
+  font-weight: 100;
   //line-height: 32px;
   margin-top: 5px;
   margin-bottom: 45px;
   font-size: 16px;
   display: inline-block;
   //max-width: 67%;
+  p{
+    color: #505050;
+    font-weight: 100;
+
+  }
 
   @include tablet{
     margin-top: 2px;
-    line-height: 16px;
   }
 
 

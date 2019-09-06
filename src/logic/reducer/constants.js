@@ -69,7 +69,7 @@ export const INITIAL_STATE = Map({
 
         {id: 2, title: 'sides',
             courses:[
-                {id: 201, name: 'Loaded Creamy Mac & Cheese', descrip: 'Made with Wisconsin Sharp Cheddar & Smoked Gouda topped with crunchy a panko crust. '},
+                {id: 201, name: 'Mac & Cheese', descrip: 'Made with Wisconsin Sharp Cheddar & Smoked Gouda topped with crunchy a panko crust. '},
                 {id: 202, name: 'Creamy Cole Slaw', descrip: 'Sliced cabbage & carrots in a mayo & sour cream base.'},
                 {id: 203, name: 'Kale Slaw', descrip: 'Cranberries, carrots, almonds, & house vinaigrette.'},
                 {id: 204, name: "Crisetelie's Corn Muffin", descrip: 'A golden moist cornbread topped with sweet honey.'},
