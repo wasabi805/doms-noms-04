@@ -12,7 +12,7 @@ const Presenter = ({video_landing}) => {
             <div className={HeroStyle.content}>
                 <div className={HeroStyle.iframe_container}>
                     <div id='home' className={HeroStyle.overlay}/>
-                    <video width={'100%'} autoPlay={true} muted={true} >
+                    <video width={'100%'} autoPlay={true} muted={true} loop={true} >
                         <source src={video_landing} type="video/mp4" />
                     </video>
 
