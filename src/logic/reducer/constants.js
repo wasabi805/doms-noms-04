@@ -155,9 +155,9 @@ export const INITIAL_STATE = Map({
 
     info: Map({
         social: List([
-            Map({name: 'facebook',  link:'https://www.facebook.com/domino.corcega/'}),
-            Map({name: 'instagram', link:'https://www.instagram.com/dcorcega00/'}),
-            Map({name: 'yelp',      link:'https://www.yelp.com/'}),
+            Map({name: 'facebook',  link:'https://www.facebook.com/doms.noms.10'}),
+            Map({name: 'instagram', link:'https://www.instagram.com/doms_noms_eats/'}),
+            Map({name: 'yelp',      link:'https://www.yelp.com/biz/doms-noms-redwood-city/'}),
         ])
     }),
 

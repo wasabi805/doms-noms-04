@@ -21,7 +21,7 @@ const Presenter = ({video_landing}) => {
                 <div className={HeroStyle.overlay_content}>
                     <div className={HeroStyle.overlay_text_container}>
                         <h1 className={HeroStyle.puff_in_center}>Welcome</h1>
-                        <p className={HeroStyle.tracking_in_expand}>|  DOM'S NOMS |</p>
+                        <p className={HeroStyle.tracking_in_expand}>|  DOM'S NOM'S |</p>
                     </div>
                 </div>
             </div>
